@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_el__llamador_el__llamador,el__llamador.el__llamador,model_el__llamador_el__llamador,base.group_user,1,1,1,1
