@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-{
-    'name': "llamador",
+{    'name': "llamador",
 
     'summary': """Gestión de la Semana Santa""",
 
@@ -8,8 +7,8 @@
         Módulo que nos proporciona la gestión de varios ámbitos de la Semana Santa
     """,
 
-    'author': "Manuel Revuelta Reyes",
-    'website': "https://www.sleepyrazor.github.io",
+    'author': "Grupo 2",
+    'website': "https://www.grupo2.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
