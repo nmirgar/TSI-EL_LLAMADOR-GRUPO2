@@ -1,17 +1,14 @@
 # -*- coding: utf-8 -*-
-{
-    'name': "El_Llamador",
+{    'name': "llamador",
 
-    'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+    'summary': """Gestión de la Semana Santa""",
 
     'description': """
-        Long description of module's purpose
+        Módulo que nos proporciona la gestión de varios ámbitos de la Semana Santa
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
+    'author': "Grupo 2",
+    'website': "https://www.grupo2.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -24,12 +21,14 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        #'views/views.xml',
+        'views/hermanos_view.xml',
+        'views/menus.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        'demo/llamador.pasos.csv',
     ],
 }

@@ -1,34 +1,27 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="el__llamador.list">
-      <field name="name">El_Llamador list</field>
-      <field name="model">el__llamador.el__llamador</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
+    <record model="ir.actions.act_window" id="llamador_list_action">
+      <field name="name">LlamadorPasos</field>  <!-- nombre modulo -->
+      <field name="res_model">llamador.pasos</field> <!-- copiar del name del modulo -->
+      <field name="view_mode">tree,form</field>
+
     </record>
--->
 
     <!-- actions opening views on models -->
 <!--
-    <record model="ir.actions.act_window" id="el__llamador.action_window">
-      <field name="name">El_Llamador window</field>
-      <field name="res_model">el__llamador.el__llamador</field>
+    <record model="ir.actions.act_window" id="el_llamador.action_window">
+      <field name="name">el_llamador window</field>
+      <field name="res_model">el_llamador.el_llamador</field>
       <field name="view_mode">tree,form</field>
     </record>
 -->
 
     <!-- server action to the one above -->
 <!--
-    <record model="ir.actions.server" id="el__llamador.action_server">
-      <field name="name">El_Llamador server</field>
-      <field name="model_id" ref="model_el__llamador_el__llamador"/>
+    <record model="ir.actions.server" id="el_llamador.action_server">
+      <field name="name">el_llamador server</field>
+      <field name="model_id" ref="model_el_llamador_el_llamador"/>
       <field name="state">code</field>
       <field name="code">
         action = {
@@ -42,19 +35,26 @@
 
     <!-- Top menu item -->
 <!--
-    <menuitem name="El_Llamador" id="el__llamador.menu_root"/>
+    <menuitem name="el_llamador" id="el_llamador.menu_root"/>
 -->
     <!-- menu categories -->
 <!--
-    <menuitem name="Menu 1" id="el__llamador.menu_1" parent="el__llamador.menu_root"/>
-    <menuitem name="Menu 2" id="el__llamador.menu_2" parent="el__llamador.menu_root"/>
+    <menuitem name="Menu 1" id="el_llamador.menu_1" parent="el_llamador.menu_root"/>
+    <menuitem name="Menu 2" id="el_llamador.menu_2" parent="el_llamador.menu_root"/>
 -->
     <!-- actions -->
 <!--
-    <menuitem name="List" id="el__llamador.menu_1_list" parent="el__llamador.menu_1"
-              action="el__llamador.action_window"/>
-    <menuitem name="Server to list" id="el__llamador" parent="el__llamador.menu_2"
-              action="el__llamador.action_server"/>
+    <menuitem name="List" id="el_llamador.menu_1_list" parent="el_llamador.menu_1"
+              action="el_llamador.action_window"/>
+    <menuitem name="Server to list" id="el_llamador" parent="el_llamador.menu_2"
+              action="el_llamador.action_server"/>
 -->
+
+    <!-- Top menu item -->
+    <menuitem name="llamador-menu" id="llamador_menu"  /> <!-- lo de los grupos de seguridad ejeje -->
+    <!-- menu categories -->
+    <menuitem name="llamador-menu-2" id="pasos_menu" parent="llamador_menu" /> <!-- en parent ponemos el id del de arriba para que solo se abra cuando se ejecuta el de arriba -->
+    <!-- actions -->
+    <menuitem name="llamador-menu-3" id="pasos_desplegables_menu" parent="pasos_menu" action="llamador_list_action"/> <!-- ponemos de action el id del record -->
   </data>
 </odoo>

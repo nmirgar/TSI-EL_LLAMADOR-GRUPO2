@@ -1,0 +1,11 @@
+<odoo>
+    <!-- Top menu item -->
+    <menuitem name="Llamador" id="main_llamador_menu" groups="group_llamador_manager"/>
+
+    <!-- menu categories -->
+    <menuitem name="Llamador" id="llamador_menu" groups="group_llamador_manager" parent="main_llamador_menu"/>
+
+    <!-- actions -->
+    <menuitem name="Hermanos" id="hermanos_menu" parent="llamador_menu" groups="group_llamador_manager" action="hermanos_list_action"/>
+    
+</odoo>

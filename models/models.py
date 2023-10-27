@@ -1,18 +1,22 @@
 # -*- coding: utf-8 -*-
 
-# from odoo import models, fields, api
+# -*- coding: utf-8 -*-
+"""
+from odoo import models, fields, api
 
+class LlamadorPasos(models.Model):
+    #_inherit = 'clase.class'
+    _name =  'llamador.pasos' #guion bajo sirve pa conectar la base de datos?
+    #para poner el nombre es nombreModulo.nombreModelo(clase)
+    _description = 'Pasos de SS'
+    
+    name = fields.Char('Titulo', required=True, help='Dame el Nombre del Paso')# la PK debe ser numerica asi que lo haremos con field.Char() ya que no es numero
+    start = fields.Datetime('Hora Inicio', required=True, autoDate=True)
+    end = fields.Datetime('Hora Finalización', required=True, autoDate=True)
+    capacity = fields.Integer('Capacity')
+    
+    #ya estaría el modulo
+    #falta hacer la vista
+    # ahora toca instalar el modulito jijiJA 
 
-# class el__llamador(models.Model):
-#     _name = 'el__llamador.el__llamador'
-#     _description = 'el__llamador.el__llamador'
-
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+"""
