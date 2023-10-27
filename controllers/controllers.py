@@ -3,19 +3,19 @@
 
 
 # class ElLlamador(http.Controller):
-#     @http.route('/el__llamador/el__llamador', auth='public')
+#     @http.route('/el_llamador/el_llamador', auth='public')
 #     def index(self, **kw):
 #         return "Hello, world"
 
-#     @http.route('/el__llamador/el__llamador/objects', auth='public')
+#     @http.route('/el_llamador/el_llamador/objects', auth='public')
 #     def list(self, **kw):
-#         return http.request.render('el__llamador.listing', {
-#             'root': '/el__llamador/el__llamador',
-#             'objects': http.request.env['el__llamador.el__llamador'].search([]),
+#         return http.request.render('el_llamador.listing', {
+#             'root': '/el_llamador/el_llamador',
+#             'objects': http.request.env['el_llamador.el_llamador'].search([]),
 #         })
 
-#     @http.route('/el__llamador/el__llamador/objects/<model("el__llamador.el__llamador"):obj>', auth='public')
+#     @http.route('/el_llamador/el_llamador/objects/<model("el_llamador.el_llamador"):obj>', auth='public')
 #     def object(self, obj, **kw):
-#         return http.request.render('el__llamador.object', {
+#         return http.request.render('el_llamador.object', {
 #             'object': obj
 #         })
