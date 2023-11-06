@@ -1,0 +1,10 @@
+<odoo>
+  <record id="almacen_list_action" model="ir.actions.act_window">
+    <field name="name">Almacen</field>
+    <field name="res_model">llamador.almacen</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crea el almacen</p>
+    </field>
+  </record>
+</odoo>

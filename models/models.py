@@ -14,9 +14,5 @@ class LlamadorPasos(models.Model):
     start = fields.Datetime('Hora Inicio', required=True, autoDate=True)
     end = fields.Datetime('Hora Finalización', required=True, autoDate=True)
     capacity = fields.Integer('Capacity')
-    
-    #ya estaría el modulo
-    #falta hacer la vista
-    # ahora toca instalar el modulito jijiJA 
 
 """
