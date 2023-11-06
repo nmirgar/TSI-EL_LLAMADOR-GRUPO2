@@ -6,7 +6,11 @@
     <menuitem name="Llamador" id="llamador_menu" groups="group_llamador_manager" parent="main_llamador_menu"/>
 
     <!-- actions -->
-    <menuitem sequence="1" name="Hermanos" id="hermanos_menu" parent="llamador_menu" groups="group_llamador_manager" action="hermano_list_action"/>
-    <menuitem sequence="2" name="Paso" id="paso_menu" parent="llamador_menu" groups="group_llamador_manager" action="paso_list_action"/>
-    
+    <menuitem name="Hermanos" id="hermanos_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="hermano_list_action"/>
+    <menuitem name="Paso" id="paso_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="paso_list_action"/>
+    <menuitem name="Hermandad" id="hermandad_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="hermandad_list_action"/>
+    <menuitem name="Enseres" id="enseres_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="enseres_list_action"/>
+    <menuitem name="Almacen" id="almacen_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="almacen_list_action"/>
+
+    <!-- actions: desplegables -->
 </odoo>
