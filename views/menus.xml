@@ -2,11 +2,10 @@
     <!-- Top menu item -->
     <menuitem name="Llamador" id="main_llamador_menu" groups="group_llamador_manager"/>
 
-    <!-- menu categories -->
-    <menuitem name="Llamador" id="llamador_menu" groups="group_llamador_manager" parent="main_llamador_menu"/>
+    <!-- menu categories: la barra -->
+    <menuitem name="Hermandad" id="hermandad_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="hermandad_list_action"/>
+    <menuitem name="Enseres" id="enseres_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="enseres_list_action"/>
+    <menuitem name="Almacen" id="almacen_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="almacen_list_action"/>
 
-    <!-- actions -->
-    <menuitem name="Hermandad" id="hermandad_menu" parent="llamador_menu" groups="group_llamador_manager" action="hermandad_list_action"/>
-    <menuitem name="Enseres" id="enseres_menu" parent="llamador_menu" groups="group_llamador_manager" action="enseres_list_action"/>
-    <menuitem name="Almacen" id="almacen_menu" parent="llamador_menu" groups="group_llamador_manager" action="almacen_list_action"/>
+    <!-- actions: desplegables -->
 </odoo>
