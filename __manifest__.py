@@ -22,13 +22,16 @@
     # always loaded
     'data': [
         'security/security.xml',
-        'security/ir.model.access.csv',
-        #'views/views.xml',
-        'views/hermanos_view.xml',
+        'security/ir.model.access.csv',  
+        'views/paso_view.xml',
+        'views/hermano_view.xml',
         'views/menus.xml',
+        #'views/ubicacion_tiempo_real.xml',
+        #'views/ubicacion_view.xml',
+        
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/llamador.pasos.csv',
+        'demo/llamador.hermano.csv',
     ],
 }

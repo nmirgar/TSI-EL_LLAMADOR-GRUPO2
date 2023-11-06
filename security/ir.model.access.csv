@@ -1,4 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_llamador_cliente,access_llamador_cliente,model_llamador_hermanos,group_llamador_manager,1,1,1,1
-
-
+access_llamador_hermano,access_llamador_hermano,model_llamador_hermano,group_llamador_manager,1,1,1,1
+access_llamador_paso,access_llamador_paso,model_llamador_paso,group_llamador_manager,1,1,1,1

@@ -4,16 +4,20 @@
 
 from odoo import models, fields, api
 
-class Hermanos(models.Model):
+class Hermano(models.Model):
     #_inherit = 'clase.class'
-    _name =  'llamador.hermanos' 
+    _name =  'llamador.hermano' 
    
     _description = 'Hermanos de los SS'
     
-    namxe = fields.Char('Titulo', required=True, help='Dame el Nombre del Brother')
-    start = fields.Datetime('Hora Inicio', required=True, autoDate=True)
-    end = fields.Datetime('Hora Finalización', required=True, autoDate=True)
-    capacity = fields.Integer('Capacity')
+    sNombre = fields.Char('Nombre', required=True)
+    sApellidos = fields.Char('Apellidos', required=True)
+    sDNI = fields.Char('DNI', required=True)
+    sTlfn = fields.Char('Telefono', required=True)
+    sEMail = fields.Char('Email', required=True)
+    sDireccion = fields.Char('Direccion', required=True)
+    fPeso = fields.Float('Peso', required=True)
+    fAltura = fields.Float('Altura', required=True)
     
   
 
