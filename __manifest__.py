@@ -23,15 +23,15 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
-        #'views/views.xml',
         'views/hermandad_view.xml',
         'views/almacen_view.xml',
         'views/enseres_view.xml',
+        'views/paso_view.xml',
+        'views/hermano_view.xml',
         'views/menus.xml',
-        
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/llamador.pasos.csv',
+        'demo/llamador.hermano.csv',
     ],
 }

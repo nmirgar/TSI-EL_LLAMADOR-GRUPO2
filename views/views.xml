@@ -56,5 +56,6 @@
     <menuitem name="llamador-menu-2" id="pasos_menu" parent="llamador_menu" /> <!-- en parent ponemos el id del de arriba para que solo se abra cuando se ejecuta el de arriba -->
     <!-- actions -->
     <menuitem name="llamador-menu-3" id="pasos_desplegables_menu" parent="pasos_menu" action="llamador_list_action"/> <!-- ponemos de action el id del record -->
+    <menuitem name="llamador-menu-4" id="pasos_desplegables_menu2" parent="llamador_menu" action="llamador_list_action"/> <!-- ponemos de action el id del record -->
   </data>
 </odoo>
