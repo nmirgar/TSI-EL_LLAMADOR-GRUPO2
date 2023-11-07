@@ -1,14 +1,58 @@
 <odoo>
-  <data>
-  
+  <record id="llamador_hermano_form_view" model="ir.ui.view">
+    <field name="name">llamador.hermano.form</field>
+    <field name="model">llamador.hermano</field>
+    <field name="arch" type="xml">
+      <form string="Hermanos">
+        <sheet layout="auto">
+          <group>
+            <field name="sNombre" />
+            <field name="sApellidos" />
+            <field name="sDNI" />
+            <field name="sTlfn" />
+            <field name="sEmail" />
+            <field name="sDireccion" />
+            <field name="fPeso" />
+            <field name="fAltura" />
+            <field name="Hermandad" />
+            <!-- <field name="instructores_id" widget="many2one" /> -->
+            <!-- <field name="users_ids">
+              <tree>
+                <field name="name" />
+                <field name="idcard" />
+              </tree>
+            </field> -->
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
 
-    <record id="hermano_list_action" model="ir.actions.act_window">
-      <field name="name">Hermanos</field>
-      <field name="res_model">llamador.hermano</field>
-      <field name="view_mode">tree,form</field>
-      <field name="help" type="html">
-        <p class="o_view_nocontent_smiling_face">Crea el primer hermano</p>
-      </field>
-    </record>
-  </data>
+  <record id="llamador_hermano_tree_view" model="ir.ui.view">
+    <field name="name">llamador.hermano.tree</field>
+    <field name="model">llamador.hermano</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="sNombre" />
+        <field name="sApellidos" />
+        <field name="sDNI" />
+        <field name="sTlfn" />
+        <field name="sEmail" />
+        <field name="sDireccion" />
+        <field name="fPeso" />
+        <field name="fAltura" />
+        <field name="Hermandad" />
+      </tree>
+    </field>
+  </record>
+
+  <record id="hermano_list_action" model="ir.actions.act_window">
+    <field name="name">Hermanos</field>
+    <field name="res_model">llamador.hermano</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crea el primer hermano</p>
+    </field>
+  </record>
+
 </odoo>
