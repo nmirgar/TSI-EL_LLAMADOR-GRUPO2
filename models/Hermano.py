@@ -14,10 +14,11 @@ class Hermano(models.Model):
     sApellidos = fields.Char('Apellidos', required=True)
     sDNI = fields.Char('DNI', required=True)
     sTlfn = fields.Char('Telefono', required=True)
-    sEMail = fields.Char('Email', required=True)
+    sEmail = fields.Char('Email', required=True)
     sDireccion = fields.Char('Direccion', required=True)
     fPeso = fields.Float('Peso', required=True)
     fAltura = fields.Float('Altura', required=True)
-    
+    Hermandad = fields.Many2many("llamador.hermandad",string="Hermandad perteneciente")
+
   
 
