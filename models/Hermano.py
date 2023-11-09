@@ -18,7 +18,7 @@ class Hermano(models.Model):
     sDireccion = fields.Char('Direccion', required=True)
     fPeso = fields.Float('Peso', required=True)
     fAltura = fields.Float('Altura', required=True)
-    # Hermandad = fields.Many2many("llamador.hermandad",string="Hermandad perteneciente")
-
-  
+    # rel_hermandad = fields.Many2many("llamador.hermandad",string="Hermandad perteneciente")
+    #rel_rol = fields.Many2many()
+    #rel_papeletaSitio= fields.
 

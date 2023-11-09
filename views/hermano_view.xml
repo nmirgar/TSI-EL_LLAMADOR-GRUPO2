@@ -14,6 +14,7 @@
             <field name="sDireccion" />
             <field name="fPeso" />
             <field name="fAltura" />
+            <field name="rel_hermandad" />
             <!-- <field name="instructores_id" widget="many2one" /> -->
             <!-- <field name="users_ids">
               <tree>
@@ -40,6 +41,7 @@
         <field name="sDireccion" />
         <field name="fPeso" />
         <field name="fAltura" />
+        <field name="rel_hermandad" />
       </tree>
     </field>
   </record>
