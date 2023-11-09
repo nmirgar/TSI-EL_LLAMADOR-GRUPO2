@@ -7,6 +7,10 @@ class Enseres(models.Model):
     #con guion bajo no se guarda en la base de datos
 
     sNombre = fields.Char(string="Nombre del elemento", required=True, help="Nombre del enser")
-    #la PK tiene q ser numerica -> tonses q hago xd
+
     iCantidad=  fields.Integer("Cantidad") 
     sDescripcion = fields.Char(string="Descripcion del elemento", required=True)
+
+    #Relaciones
+    # rel_hermandad = fields.Many2one("llamador.hermandad", string = "Hermandad perteneciente")
+    #rel_almacen = fields.One2one("llamador.almacen", "rel_enseres" ,string = "Almacen perteneciente")
