@@ -7,3 +7,4 @@ from . import Almacen
 from . import Enseres
 from . import Paso
 from . import PuntoRecorrido
+from . import Donacion

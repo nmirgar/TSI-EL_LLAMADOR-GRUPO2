@@ -27,6 +27,7 @@
         'views/almacen_view.xml',
         'views/enseres_view.xml',
         'views/paso_view.xml',
+        'views/donacion_view.xml',
         'views/hermano_view.xml',
         'views/menus.xml',
     ],
