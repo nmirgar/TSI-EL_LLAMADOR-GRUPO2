@@ -30,6 +30,7 @@
         'views/donacion_view.xml',
         'views/hermano_view.xml',
         'views/rol_view.xml',
+        'views/papeleta_view.xml',
         'views/menus.xml',
     ],
     # only loaded in demonstration mode
