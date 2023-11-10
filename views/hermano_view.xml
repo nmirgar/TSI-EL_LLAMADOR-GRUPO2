@@ -8,12 +8,12 @@
           <group>
             <field name="sNombre" />
             <field name="sApellidos" />
-            <field name="sDNI" />
+            <field name="sDNI" />            
             <field name="sTlfn" />
             <field name="sEmail" />
             <field name="sDireccion" />
             <field name="fPeso" />
-            <field name="fAltura" />
+            <field name="fAltura" />          
             <field name="rel_hermandad" />
             <!-- <field name="instructores_id" widget="many2one" /> -->
             <!-- <field name="users_ids">
@@ -36,11 +36,13 @@
         <field name="sNombre" />
         <field name="sApellidos" />
         <field name="sDNI" />
+        <field name="rel_rol" />
         <field name="sTlfn" />
         <field name="sEmail" />
         <field name="sDireccion" />
         <field name="fPeso" />
         <field name="fAltura" />
+        <field name="rel_donacion" />
         <field name="rel_hermandad" />
       </tree>
     </field>

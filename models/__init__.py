@@ -8,3 +8,4 @@ from . import Enseres
 from . import Paso
 from . import PuntoRecorrido
 from . import Donacion
+from . import Rol

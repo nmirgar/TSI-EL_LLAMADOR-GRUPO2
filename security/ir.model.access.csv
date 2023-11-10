@@ -5,3 +5,4 @@ access_llamador_enseres,access_llamador_enseres,model_llamador_enseres,group_lla
 access_llamador_hermano,access_llamador_hermano,model_llamador_hermano,group_llamador_manager,1,1,1,1
 access_llamador_paso,access_llamador_paso,model_llamador_paso,group_llamador_manager,1,1,1,1
 access_llamador_donacion,access_llamador_donacion,model_llamador_donacion,group_llamador_manager,1,1,1,1
+access_llamador_rol,access_llamador_rol,model_llamador_rol,group_llamador_manager,1,1,1,1

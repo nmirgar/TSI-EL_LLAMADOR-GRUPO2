@@ -8,3 +8,4 @@ class Enseres(models.Model):
     sNombre = fields.Char(string="Nombre del elemento", required=True, help="Nombre del enser")
     iCantidad=  fields.Integer("Cantidad") 
     sDescripcion = fields.Char(string="Descripcion del elemento", required=True)
+    rel_almacen = fields.Many2one("llamador.almacen",string = "Almacen perteneciente")
