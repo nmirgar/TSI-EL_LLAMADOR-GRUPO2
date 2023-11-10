@@ -16,5 +16,5 @@ class Hermandad(models.Model):
     sDia_procesion = fields.Char(string="Dia de la semana que le toca salir", required=True)
 
     #Relaciones
-    # rel_hermanos = fields.Many2many("llamador.hermano", string = "Hermanos pertenecientes")
-    # rel_enseres = fields.One2many("llamador.enseres", "rel_hermandad",string = "Enseres pertenecientes")
+    rel_hermanos = fields.Many2many("llamador.hermano", string = "Hermanos pertenecientes")
+    rel_almacen = fields.Many2many("llamador.almacen",string = "Almacenes pertenecientes")

@@ -12,5 +12,4 @@ class Enseres(models.Model):
     sDescripcion = fields.Char(string="Descripcion del elemento", required=True)
 
     #Relaciones
-    # rel_hermandad = fields.Many2one("llamador.hermandad", string = "Hermandad perteneciente")
-    #rel_almacen = fields.One2one("llamador.almacen", "rel_enseres" ,string = "Almacen perteneciente")
+    rel_almacen = fields.Many2one("llamador.almacen",string = "Almacen perteneciente")

@@ -8,6 +8,8 @@
           <group>
             <field name="iCapacidad_max" />
             <field name="sLocalizacion" />
+            <field name="rel_hermandad" />
+            <field name="rel_enseres" />
           </group>
         </sheet>
       </form>
@@ -20,7 +22,9 @@
     <field name="arch" type="xml">
       <tree string="tree_string">
         <field name="iCapacidad_max" />
-            <field name="sLocalizacion" />
+        <field name="sLocalizacion" />
+        <field name="rel_hermandad" />
+        <field name="rel_enseres" />
       </tree>
     </field>
   </record>

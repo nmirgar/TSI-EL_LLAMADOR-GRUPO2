@@ -9,4 +9,5 @@ class Almacen(models.Model):
     sLocalizacion = fields.Char(string="Localizacion", required=True)
 
     #Relaciones
-    #rel_enseres = fields.One2many("llamador.enseres", "rel_almacen",string = "Enseres pertenecientes")
+    rel_enseres = fields.One2many("llamador.enseres", "rel_almacen",string = "Enseres pertenecientes")
+    rel_hermandad = fields.Many2many("llamador.hermandad", string = "Hermandad perteneciente")
