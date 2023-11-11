@@ -34,7 +34,7 @@
     <field name="res_model">llamador.enseres</field>
     <field name="view_mode">tree,form</field>
     <field name="help" type="html">
-      <p class="o_view_nocontent_smiling_face">Crea el enser</p>
+      <p class="o_view_nocontent_smiling_face">Crea el primer elemento</p>
     </field>
   </record>
 </odoo>

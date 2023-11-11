@@ -14,6 +14,7 @@ class Hermandad(models.Model):
     dFecha_fundacion = fields.Datetime('Fecha fundacion',required=True, autodate = False)
     sDescripcion = fields.Char(string="Descripcion Hermandad", required=True)
     sDia_procesion = fields.Char(string="Dia de la semana que le toca salir", required=True)
+    escudo = fields.Binary('Escudo')
 
     #Relaciones
     rel_hermanos = fields.Many2many("llamador.hermano", string = "Hermanos pertenecientes")

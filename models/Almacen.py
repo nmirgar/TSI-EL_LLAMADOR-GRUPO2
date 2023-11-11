@@ -10,4 +10,4 @@ class Almacen(models.Model):
 
     #Relaciones
     rel_enseres = fields.One2many("llamador.enseres", "rel_almacen",string = "Enseres pertenecientes")
-    rel_hermandad = fields.Many2many("llamador.hermandad", string = "Hermandad perteneciente")
+    rel_hermandad = fields.Many2many("llamador.hermandad", string = "Hermandades pertenecientes")
