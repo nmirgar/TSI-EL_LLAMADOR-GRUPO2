@@ -11,6 +11,9 @@
     <menuitem name="Hermandad" id="hermandad_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="hermandad_list_action"/>
     <menuitem name="Enseres" id="enseres_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="enseres_list_action"/>
     <menuitem name="Almacen" id="almacen_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="almacen_list_action"/>
+    <menuitem name="Donacion" id="donacion_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="donacion_list_action"/>
+    <menuitem name="Rol" id="rol_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="rol_list_action"/>   
+    <menuitem name="Papeleta" id="papeleta_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="papeleta_list_action"/>
 
     <!-- actions: desplegables -->
 </odoo>

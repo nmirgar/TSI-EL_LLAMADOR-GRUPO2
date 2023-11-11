@@ -1,0 +1,41 @@
+<odoo>
+  <record id="llamador_papeleta_form_view" model="ir.ui.view">
+    <field name="name">llamador.papeleta.form</field>
+    <field name="model">llamador.papeleta</field>
+    <field name="arch" type="xml">
+      <form string="Papeletas">
+        <sheet layout="auto">
+          <group>
+            <field name="sTipo" />
+            <field name="fPrecio" />
+            <field name="dFecha" />
+            <field name="rel_hermano" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="llamador_papeleta_tree_view" model="ir.ui.view">
+    <field name="name">llamador.papeleta.tree</field>
+    <field name="model">llamador.papeleta</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+            <field name="sTipo" />
+            <field name="fPrecio" />
+            <field name="dFecha" />
+            <field name="rel_hermano" />
+      </tree>
+    </field>
+  </record>
+
+  <record id="papeleta_list_action" model="ir.actions.act_window">
+    <field name="name">Papeleta</field>
+    <field name="res_model">llamador.papeleta</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crea una nueva Papeleta de Sitio para un hermano</p>
+    </field>
+  </record>
+
+</odoo>
