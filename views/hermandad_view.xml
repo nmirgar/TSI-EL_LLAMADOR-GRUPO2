@@ -42,7 +42,7 @@
       </tree>
     </field>
   </record>
-
+<!-- 
   <record id="llamador_hermandad_graph_view" model="ir.ui.view">
     <field name="name">llamador.hermandad.graph</field>
     <field name="model">llamador.hermandad</field>
@@ -52,7 +52,7 @@
         <field name="rel_hermanos" />
       </graph>
     </field>
-  </record>
+  </record> -->
 
   <record id="hermandad_list_action" model="ir.actions.act_window">
     <field name="name">Hermandad</field>
