@@ -7,6 +7,7 @@ class Almacen(models.Model):
 
     iCapacidad_max=  fields.Integer("Capacidad Maxima") 
     sLocalizacion = fields.Char(string="Localizacion", required=True)
+    geo_localizacion_almacen = fields.Char(string="Ubicación Geoespacial", help = "Coordenadas")
 
     #Relaciones
     rel_enseres = fields.One2many("llamador.enseres", "rel_almacen",string = "Enseres pertenecientes")

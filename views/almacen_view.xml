@@ -8,6 +8,7 @@
           <group>
             <field name="iCapacidad_max" />
             <field name="sLocalizacion" />
+            <field name="geo_localizacion_almacen" />
           </group>
           <notebook>
             <page name="hermandades" string="Hermandades">
@@ -29,7 +30,7 @@
   <record id="llamador_almacen_tree_view" model="ir.ui.view">
     <field name="name">llamador.almacen.tree</field>
     <field name="model">llamador.almacen</field>
-   <field name="arch" type="xml">
+    <field name="arch" type="xml">
       <tree string="tree_string">
         <field name="iCapacidad_max" />
         <field name="sLocalizacion" />
@@ -37,6 +38,27 @@
     </field>
   </record>
 
+  <!-- <record id="llamador_almacen_map_view" model="ir.ui.view">
+        <field name="name">llamador.almacen.map</field>
+        <field name="model">llamador.almacen</field>
+        <field name="arch" type="xml">
+          <sheet>
+            <group>
+              <field name="geo_localizacion_almacen" widget="map" options="{'disable_linking': true}" string="Mapa de Almacenes"/>
+            </group>
+          </sheet>
+        </field>
+  </record> -->
+<!-- 
+  <record id="llamador_almacen_map_view" model="ir.ui.view">
+    <field name="name">llamador.almacen.map</field>
+    <field name="model">llamador.almacen</field>
+    <field name="arch" type="xml">
+      <map string="Mapa Almacenes">
+        <field name="geo_localizacion_almacen" widget="map" options="{'disable_linking': true}" string="Mapa de Almacenes"/>
+      </map>
+    </field>
+  </record> -->
 
   <record id="almacen_list_action" model="ir.actions.act_window">
     <field name="name">Almacen</field>

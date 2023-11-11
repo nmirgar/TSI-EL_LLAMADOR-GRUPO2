@@ -10,4 +10,6 @@
     <menuitem name="Almacen" id="almacen_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="almacen_list_action"/>
 
     <!-- actions: desplegables -->
+    <menuitem name="Gestion Almacenes" id="almacen_gestion_menu" parent="almacen_menu" groups="group_llamador_manager" action="almacen_list_action"/>
+    <menuitem name="Mapa Almacenes" id="almacenes_mapa_menu" parent="almacen_menu" groups="group_llamador_manager" action="almacen_map_action" />
 </odoo>
