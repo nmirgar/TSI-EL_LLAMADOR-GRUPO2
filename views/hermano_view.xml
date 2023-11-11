@@ -15,6 +15,9 @@
             <field name="fPeso" />
             <field name="fAltura" />
             <field name="rel_hermandad" />
+            <field name="rel_rol" />
+            <field name="rel_donacion" />
+            <field name="rel_papeleta" />
             <!-- <field name="instructores_id" widget="many2one" /> -->
             <!-- <field name="users_ids">
               <tree>
@@ -42,6 +45,9 @@
         <field name="fPeso" />
         <field name="fAltura" />
         <field name="rel_hermandad" />
+        <field name="rel_rol" />
+        <field name="rel_donacion" />
+        <field name="rel_papeleta" />
       </tree>
     </field>
   </record>

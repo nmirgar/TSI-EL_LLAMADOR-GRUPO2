@@ -1,5 +1,39 @@
 <odoo>
-  <data>
+  
+  <record id="llamador_paso_form_view" model="ir.ui.view">
+    <field name="name">llamador.paso.form</field>
+    <field name="model">llamador.paso</field>
+    <field name="arch" type="xml">
+      <form string="Pasos">
+        <sheet layout="auto">
+          <group>
+            <field name="sNombre" />
+            <field name="iNumeroTramos" />
+            <field name="iFilasCuadrilla" />
+            <field name="iColumnasCuadrilla" />
+            <field name="iNumeroCuadrillas" />
+            <field name="fPeso" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="llamador_paso_tree_view" model="ir.ui.view">
+    <field name="name">llamador.paso.tree</field>
+    <field name="model">llamador.paso</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="sNombre" />
+        <field name="iNumeroTramos" />
+        <field name="iFilasCuadrilla" />
+        <field name="iColumnasCuadrilla" />
+        <field name="iNumeroCuadrillas" />
+        <field name="fPeso" />
+      </tree>
+    </field>
+  </record>
+
     <record id="paso_list_action" model="ir.actions.act_window">
       <field name="name">Paso</field>
       <field name="res_model">llamador.paso</field>
@@ -8,5 +42,5 @@
         <p class="o_view_nocontent_smiling_face">Crea el primer paso</p>
       </field>
     </record>
-  </data>
+  
 </odoo>

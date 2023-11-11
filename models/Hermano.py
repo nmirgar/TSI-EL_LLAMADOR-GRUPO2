@@ -19,6 +19,7 @@ class Hermano(models.Model):
     fPeso = fields.Float('Peso', required=True)
     fAltura = fields.Float('Altura', required=True)
     rel_hermandad = fields.Many2many("llamador.hermandad",string="Hermandad perteneciente")
-    #rel_rol = fields.Many2many()
-    #rel_papeletaSitio= fields.
+    rel_rol = fields.Many2many("llamador.rol", string="Rol Hermano")
+    rel_donacion = fields.Many2many("llamador.donacion", string="Donacion Hermano")
+    rel_papeleta= fields.One2many("llamador.papeleta", string="Papeleta de Sitio")
 

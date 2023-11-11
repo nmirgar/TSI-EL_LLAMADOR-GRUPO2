@@ -28,7 +28,9 @@
         'views/enseres_view.xml',
         'views/paso_view.xml',
         'views/hermano_view.xml',
+       # 'views/googlemaps_view.xml',
         'views/menus.xml',
+        
     ],
     # only loaded in demonstration mode
     'demo': [
