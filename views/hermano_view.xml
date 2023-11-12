@@ -5,19 +5,31 @@
     <field name="arch" type="xml">
       <form string="Hermanos">
         <sheet layout="auto">
-          <group>
-            <field name="sNombre" />
-            <field name="sApellidos" />
-            <field name="sDNI" />
-            <field name="sTlfn" />
-            <field name="sEmail" />
-            <field name="sDireccion" />
-            <field name="fPeso" />
-            <field name="fAltura" />
-            <field name="rel_hermandad" />
-            <field name="rel_rol" />
-            <field name="rel_donacion" />
-            <field name="rel_papeleta" />
+            <notebook>
+              <page name="datos_personales" string="Datos personales">
+                <group>
+                  <field name="foto" widget="image" class="oe_avatar"/>
+                  <field name="sNombre" />
+                  <field name="sApellidos" />
+                  <field name="sDNI" />
+                </group>
+                <group>            
+                  <field name="sTlfn" />
+                  <field name="sEmail" />
+                  <field name="sDireccion" />
+                  <field name="fPeso" />
+                  <field name="fAltura" />          
+                </group>
+              </page>
+              <page name="Hermandad" string="Hermandad">
+                <group>
+                  <field name="rel_hermandad" />
+                  <field name="rel_rol" />
+                  <field name="rel_donacion" />
+                  <field name="rel_papeleta" />
+                </group>
+              </page>
+            </notebook>
             <!-- <field name="instructores_id" widget="many2one" /> -->
             <!-- <field name="users_ids">
               <tree>
@@ -25,7 +37,6 @@
                 <field name="idcard" />
               </tree>
             </field> -->
-          </group>
         </sheet>
       </form>
     </field>
@@ -38,16 +49,9 @@
       <tree string="tree_string">
         <field name="sNombre" />
         <field name="sApellidos" />
-        <field name="sDNI" />
+        <field name="sDNI" />            
         <field name="sTlfn" />
-        <field name="sEmail" />
-        <field name="sDireccion" />
-        <field name="fPeso" />
-        <field name="fAltura" />
-        <field name="rel_hermandad" />
-        <field name="rel_rol" />
-        <field name="rel_donacion" />
-        <field name="rel_papeleta" />
+        <field name="rel_rol" widget="many2many" />
       </tree>
     </field>
   </record>
