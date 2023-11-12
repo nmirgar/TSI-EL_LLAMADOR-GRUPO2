@@ -1,4 +1,5 @@
 <odoo>
+  <!-- Vista form: a mostrar dentro de la Hermandad-->
   <record id="llamador_hermandad_form_view" model="ir.ui.view">
     <field name="name">llamador.hermandad.form</field>
     <field name="model">llamador.hermandad</field>
@@ -6,41 +7,60 @@
       <form string="Hermandad">
         <sheet layout="auto">
           <group>
+            <field name="escudo" widget="image" class="oe_avatar" />
             <field name="sNombre" />
             <field name="sEmail_cont" />
             <field name="iTlf_cont" />
             <field name="dFecha_fundacion" />
             <field name="sDescripcion" />
             <field name="sDia_procesion" />
-            <field name="rel_hermanos" />
-            <field name="rel_almacen" />
           </group>
+          <notebook>
+            <page name="hermanos" string="Hermanos">
+              <group>
+                <field name="rel_hermanos" />
+              </group>
+            </page>
+            <page name="almacen" string="Almacenes">
+              <group>
+                <field name="rel_almacen" widget="many2many_tags"/>
+              </group>
+            </page>
+          </notebook>
         </sheet>
       </form>
     </field>
   </record>
 
+  <!-- Vista tree: a mostrar en el listado de Hermandades  -->
   <record id="llamador_hermandad_tree_view" model="ir.ui.view">
     <field name="name">llamador.hermandad.tree</field>
     <field name="model">llamador.hermandad</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
         <field name="sNombre" />
-        <field name="sEmail_cont" />
-        <field name="iTlf_cont" />
-        <field name="dFecha_fundacion" />
         <field name="sDescripcion" />
         <field name="sDia_procesion" />
-        <field name="rel_hermanos" />
-        <field name="rel_almacen" />
       </tree>
     </field>
   </record>
 
+  <!-- Vista Calendar -->
+  <record id="llamador_hermandad_calendar_view" model="ir.ui.view">
+    <field name="name">llamador.hermandad.calendar</field>
+    <field name="model">llamador.hermandad</field>
+    <field name="arch" type="xml">
+      <calendar string="Hermandad" date_start="sDia_procesion" mode="month">
+        <field name="sNombre" />
+      </calendar>
+    </field>
+  </record>
+
+  <!-- Vista list action -->
   <record id="hermandad_list_action" model="ir.actions.act_window">
     <field name="name">Hermandad</field>
     <field name="res_model">llamador.hermandad</field>
-    <field name="view_mode">tree,form</field>
+    <field name="view_mode">tree,form,calendar</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Crea la primera hermandad</p>
     </field>

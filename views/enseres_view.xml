@@ -1,4 +1,5 @@
 <odoo>
+  <!-- Vista form: a mostrar dentro del Enser -->
   <record id="llamador_enseres_form_view" model="ir.ui.view">
     <field name="name">llamador.enseres.form</field>
     <field name="model">llamador.enseres</field>
@@ -16,6 +17,7 @@
     </field>
   </record>
 
+  <!-- Vista tree: a mostrar en el listado de Enseres  -->
   <record id="llamador_enseres_tree_view" model="ir.ui.view">
     <field name="name">llamador.enseres.tree</field>
     <field name="model">llamador.enseres</field>
@@ -29,12 +31,13 @@
     </field>
   </record>
 
+  <!-- Vista list action -->
   <record id="enseres_list_action" model="ir.actions.act_window">
     <field name="name">Enseres</field>
     <field name="res_model">llamador.enseres</field>
     <field name="view_mode">tree,form</field>
     <field name="help" type="html">
-      <p class="o_view_nocontent_smiling_face">Crea el enser</p>
+      <p class="o_view_nocontent_smiling_face">Crea el primer elemento</p>
     </field>
   </record>
 </odoo>

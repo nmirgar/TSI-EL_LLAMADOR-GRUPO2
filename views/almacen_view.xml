@@ -1,21 +1,34 @@
 <odoo>
+  <!-- Vista form: a mostrar dentro del Almacén -->
   <record id="llamador_almacen_form_view" model="ir.ui.view">
     <field name="name">llamador.almacen.form</field>
     <field name="model">llamador.almacen</field>
     <field name="arch" type="xml">
       <form string="Almacen">
-        <sheet layout="auto">
+        <sheet>
           <group>
             <field name="iCapacidad_max" />
             <field name="sLocalizacion" />
-            <field name="rel_hermandad" />
-            <field name="rel_enseres" />
+            <field name="geo_localizacion_almacen" />
           </group>
+          <notebook>
+            <page name="hermandades" string="Hermandades">
+              <group>
+                <field name="rel_hermandad" />
+              </group>
+            </page>
+            <page name="enseres" string="Enseres">
+              <group>
+                <field name="rel_enseres" />
+              </group>
+            </page>
+          </notebook>
         </sheet>
       </form>
     </field>
   </record>
 
+  <!-- Vista tree: a mostrar en el listado de Almacenes  -->
   <record id="llamador_almacen_tree_view" model="ir.ui.view">
     <field name="name">llamador.almacen.tree</field>
     <field name="model">llamador.almacen</field>
@@ -23,18 +36,27 @@
       <tree string="tree_string">
         <field name="iCapacidad_max" />
         <field name="sLocalizacion" />
-        <field name="rel_hermandad" />
-        <field name="rel_enseres" />
       </tree>
     </field>
   </record>
+  
+  <!-- Vista para mostrar el mapa con las ubicaciones de los almacenes -->
+  <!-- 
+  <record id="llamador_almacen_map_view" model="ir.ui.view">
+        <field name="name">llamador.almacen.map</field>
+        <field name="model">llamador.almacen</field>
+        <field name="arch" type="xml">
+          <map almacen = "rel_almacen" ></map>
+        </field>
+  </record> -->
 
+  <!-- Vista list action -->
   <record id="almacen_list_action" model="ir.actions.act_window">
     <field name="name">Almacen</field>
     <field name="res_model">llamador.almacen</field>
     <field name="view_mode">tree,form</field>
     <field name="help" type="html">
-      <p class="o_view_nocontent_smiling_face">Crea el almacen</p>
+      <p class="o_view_nocontent_smiling_face">Crea el primer almacen</p>
     </field>
   </record>
 </odoo>
