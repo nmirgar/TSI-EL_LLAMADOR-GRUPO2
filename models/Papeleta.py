@@ -10,4 +10,4 @@ class Papeleta(models.Model):
                                      ('otros','Otros'),],
                                      'Tipo de papeleta', default='tipo1')
      fPrecio = fields.Float('Precio')
-     rel_hermano = fields.Many2one("llamador.hermano", string = "Hermano asociado")
+     rel_hermano = fields.One2many("llamador.hermano","rel_papeleta", string = "Hermano asociado")
