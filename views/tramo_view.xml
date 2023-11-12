@@ -1,0 +1,52 @@
+<odoo>
+    <record id="llamador_tramo_form_view" model="ir.ui.view">
+        <field name="name">llamador.tramo.form</field>
+        <field name="model">llamador.tramo</field>
+        <field name="arch" type="xml">
+            <form string="Tramos">
+                <sheet layout="auto">
+                    <notebook>
+                        <page name="datos_tramo" string="Datos Tramo">
+                            <group>
+                                <field name="iNum_tram"/>
+                                <field name="iCap"/>
+                            </group>
+                        </page>
+                        <page name="datos_paso" string="Paso">
+                            <group>
+                                <field name="rel_paso"/>
+                            </group>
+                        </page>
+                        <page name="datos_papeleta" string="Papeleta Sitio">
+                            <group>
+                                <field name="rel_papeleta"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="llamador_tramo_tree_view" model="ir.ui.view">
+        <field name="name">llamador.tramo.tree</field>
+        <field name="model">llamador.tramo</field>
+        <field name="arch" type="xml">
+            <tree string="Tramos">
+                <field name="iNum_tram"/>
+                <field name="iCap"/>
+                <field name="rel_papeleta"/>
+                <field name="rel_paso"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="tramo_list_action" model="ir.actions.act_window">
+        <field name="name">Tramos Llamador</field>
+        <field name="res_model">llamador.tramo</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Crea el tramo</p>
+        </field>
+    </record>
+</odoo>

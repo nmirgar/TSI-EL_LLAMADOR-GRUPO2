@@ -1,0 +1,39 @@
+<odoo>
+  
+  <record id="view_puntorecorrido_form" model="ir.ui.view">
+            <field name="name">llamador.puntorecorrido.form</field>
+            <field name="model">llamador.puntorecorrido</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="sUbicacion"/>
+                        <field name="sPuntoInteres"/>
+                        <field name="rel_paso"/>
+                        <field name="rel_evento"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+  <record id="llamador_puntorecorrido_tree_view" model="ir.ui.view">
+    <field name="name">llamador.puntorecorrido.tree</field>
+    <field name="model">llamador.puntorecorrido</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="sUbicacion"/>
+        <field name="sPuntoInteres"/>
+        <field name="rel_evento" widget="many2many_tags"/>
+      </tree>
+    </field>
+  </record>
+
+    <record id="puntorecorrido_list_action" model="ir.actions.act_window">
+      <field name="name">Punto Recorrido</field>
+      <field name="res_model">llamador.puntorecorrido</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">Crea el primer Punto de Recorrido</p>
+      </field>
+    </record>
+  
+</odoo>

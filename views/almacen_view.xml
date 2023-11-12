@@ -1,0 +1,40 @@
+<odoo>
+  <record id="llamador_almacen_form_view" model="ir.ui.view">
+    <field name="name">llamador.almacen.form</field>
+    <field name="model">llamador.almacen</field>
+    <field name="arch" type="xml">
+      <form string="Almacen">
+        <sheet layout="auto">
+          <group>
+            <field name="iCapacidad_max" />
+            <field name="sLocalizacion" />
+            <field name="rel_hermandad" />
+            <field name="rel_enseres" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="llamador_almacen_tree_view" model="ir.ui.view">
+    <field name="name">llamador.almacen.tree</field>
+    <field name="model">llamador.almacen</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="iCapacidad_max" />
+        <field name="sLocalizacion" />
+        <field name="rel_hermandad" />
+        <field name="rel_enseres" />
+      </tree>
+    </field>
+  </record>
+
+  <record id="almacen_list_action" model="ir.actions.act_window">
+    <field name="name">Almacen</field>
+    <field name="res_model">llamador.almacen</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Crea el almacen</p>
+    </field>
+  </record>
+</odoo>

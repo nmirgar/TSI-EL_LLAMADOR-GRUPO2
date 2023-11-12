@@ -1,0 +1,64 @@
+<odoo>
+    <record id="llamador_evento_form_view" model="ir.ui.view">
+        <field name="name">llamador.evento.form</field>
+        <field name="model">llamador.evento</field>
+        <field name="arch" type="xml">
+            <form string="Eventos">
+                <notebook>
+                    <page name="datos_evento" string="Datos Evento">
+                        <group>
+                            <field name="sName"/>
+                            <field name="sFechaHora"/>
+                            <field name="rel_tipoevento"/>
+                        </group>
+                    </page>
+                    <page name="datos_puntorecorrido" string="Puntos Recorrido">
+                        <group>
+                            <field name="rel_puntorecorrido"/>
+                        </group>
+                    </page>
+                    <page name="datos_papeleta" string="Papeleta Sitio">
+                        <group>
+                            <field name="rel_papeleta"/>
+                        </group>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record id="llamador_evento_tree_view" model="ir.ui.view">
+        <field name="name">llamador.evento.tree</field>
+        <field name="model">llamador.evento</field>
+        <field name="arch" type="xml">
+            <tree string="Eventos">
+                <field name="sName"/>
+                <field name="sFechaHora"/>
+                <field name="rel_tipoevento"/>
+                <field name="rel_puntorecorrido" widget="many2many_tags"/>
+                <field name="rel_papeleta" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="llamador_evento_calendar_view" model="ir.ui.view">
+    <field name="name">llamador.evento.calendar</field>
+    <field name="model">llamador.evento</field>
+    <field name="arch" type="xml">
+        <calendar string="Evento" color="rel_tipoevento" date_start="sFechaHora" mode="month">
+            <field name="sName"/>
+            <field name="sFechaHora"/>
+        </calendar>
+    </field>
+</record>
+
+
+    <record id="evento_list_action" model="ir.actions.act_window">
+        <field name="name">Eventos Llamador</field>
+        <field name="res_model">llamador.evento</field>
+        <field name="view_mode">tree,form,calendar</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Crea el evento</p>
+        </field>
+    </record>
+</odoo>
