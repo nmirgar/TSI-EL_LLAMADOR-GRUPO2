@@ -1,0 +1,18 @@
+<odoo>
+
+    <template id="assets_backend" name="crnd_map_view assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="map.js"/>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZgkbeAVF_6hbi4uK_m6_bFdlzeVA8RYs&callback=myMap"></script>
+            <t t-set="google_maps_api_key" t-value="AIzaSyBZgkbeAVF_6hbi4uK_m6_bFdlzeVA8RYs"/>
+            <t t-set="user_lang" t-value="request.env.user.lang.split('_')[0]"/>
+            <t t-if="google_maps_api_key">
+                <script defer="defer" async="async" type="text/javascript" t-attf-src="https://maps.googleapis.com/maps/api/js?key=#{google_maps_api_key}&amp;language=#{user_lang}&amp;callback=Function.prototype"/>
+            </t>
+            <t t-else="">
+                <script defer="defer" async="async" type="text/javascript" t-attf-src="https://maps.googleapis.com/maps/api/js?language=#{user_lang}&amp;callback=Function.prototype"/>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>
