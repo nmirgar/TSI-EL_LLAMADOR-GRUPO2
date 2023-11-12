@@ -3,6 +3,7 @@ from odoo import models, fields
 class Paso(models.Model):
     _name = 'llamador.paso'
     _description = 'Paso de Semana Santa'
+    _rec_name = "sNombre"
     # sLocalizacion = fields.Char(string="Localización", required=True)
     # geo_localizacion = fields.Char(string="Ubicación Geoespacial")
     # latitude = fields.Float(string='Latitud')

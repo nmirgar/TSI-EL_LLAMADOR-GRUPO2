@@ -48,7 +48,7 @@
         <field name="iColumnasCuadrilla" />
         <field name="iNumeroCuadrillas" />
         <field name="fPeso" />
-        <field name="rel_puntorecorrido"/>
+        <field name="rel_puntorecorrido" widget="many2many_tags"/>
       </tree>
     </field>
   </record>

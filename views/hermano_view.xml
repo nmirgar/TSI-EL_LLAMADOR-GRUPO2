@@ -63,7 +63,7 @@
         <field name="sApellidos" />
         <field name="sDNI" />            
         <field name="sTlfn" />
-        <field name="rel_rol" widget="many2many_tags" options="{'no_create': True, 'display_name': 'cTipo'}" />
+        <field name="rel_rol" widget="many2many_tags"/>
       </tree>
     </field>
   </record>
