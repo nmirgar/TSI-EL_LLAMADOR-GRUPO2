@@ -32,8 +32,10 @@
         'views/puntorecorrido_view.xml',
         'views/rol_view.xml',
         'views/papeleta_view.xml',
-        'views/menus.xml',
-        
+        'views/tramo_view.xml',
+        'views/evento_view.xml',
+        'views/tipoevento_view.xml',
+        'views/menus.xml',        
     ],
     # only loaded in demonstration mode
     'demo': [

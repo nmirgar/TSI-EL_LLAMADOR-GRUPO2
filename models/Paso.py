@@ -14,6 +14,7 @@ class Paso(models.Model):
     iNumeroCuadrillas = fields.Integer('Numero de Cuadrillas',required=True)
     fPeso = fields.Float('Peso', required=True)
     rel_puntorecorrido= fields.Many2many("llamador.puntorecorrido", string="Puntos de Recorrido")
+    rel_tramo = fields.One2many('llamador.tramo', 'rel_paso', string='Tramos')
 
     html_content = fields.Html(string='Contenido HTML')
 
