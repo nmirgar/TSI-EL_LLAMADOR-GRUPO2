@@ -1,10 +1,48 @@
 <odoo>
+  <record id="llamador_hermandad_form_view" model="ir.ui.view">
+    <field name="name">llamador.hermandad.form</field>
+    <field name="model">llamador.hermandad</field>
+    <field name="arch" type="xml">
+      <form string="Hermandad">
+        <sheet layout="auto">
+          <group>
+            <field name="sNombre" />
+            <field name="sEmail_cont" />
+            <field name="iTlf_cont" />
+            <field name="dFecha_fundacion" />
+            <field name="sDescripcion" />
+            <field name="sDia_procesion" />
+            <field name="rel_hermanos" />
+            <field name="rel_almacen" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="llamador_hermandad_tree_view" model="ir.ui.view">
+    <field name="name">llamador.hermandad.tree</field>
+    <field name="model">llamador.hermandad</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="sNombre" />
+        <field name="sEmail_cont" />
+        <field name="iTlf_cont" />
+        <field name="dFecha_fundacion" />
+        <field name="sDescripcion" />
+        <field name="sDia_procesion" />
+        <field name="rel_hermanos" />
+        <field name="rel_almacen" />
+      </tree>
+    </field>
+  </record>
+
   <record id="hermandad_list_action" model="ir.actions.act_window">
     <field name="name">Hermandad</field>
     <field name="res_model">llamador.hermandad</field>
     <field name="view_mode">tree,form</field>
     <field name="help" type="html">
-      <p class="o_view_nocontent_smiling_face">Crea la hermandad</p>
+      <p class="o_view_nocontent_smiling_face">Crea la primera hermandad</p>
     </field>
   </record>
 </odoo>

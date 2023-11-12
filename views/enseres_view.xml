@@ -1,4 +1,34 @@
 <odoo>
+  <record id="llamador_enseres_form_view" model="ir.ui.view">
+    <field name="name">llamador.enseres.form</field>
+    <field name="model">llamador.enseres</field>
+    <field name="arch" type="xml">
+      <form string="Enseres">
+        <sheet layout="auto">
+          <group>
+            <field name="sNombre" />
+            <field name="iCantidad" />
+            <field name="sDescripcion" />
+            <field name="rel_almacen" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="llamador_enseres_tree_view" model="ir.ui.view">
+    <field name="name">llamador.enseres.tree</field>
+    <field name="model">llamador.enseres</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="sNombre" />
+            <field name="iCantidad" />
+            <field name="sDescripcion" />
+            <field name="rel_almacen" />
+      </tree>
+    </field>
+  </record>
+
   <record id="enseres_list_action" model="ir.actions.act_window">
     <field name="name">Enseres</field>
     <field name="res_model">llamador.enseres</field>
