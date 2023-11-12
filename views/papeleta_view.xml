@@ -5,13 +5,25 @@
     <field name="arch" type="xml">
       <form string="Papeletas">
         <sheet layout="auto">
-          <group>
-            <field name="sTipo" />
-            <field name="fPrecio" />
-            <field name="dFecha" />
-            <field name="rel_hermano" />
-            <field name="rel_tramo" />
-          </group>
+          <notebook>
+            <page name="datos_papeleta" string="Datos Papeleta de Sitio">
+              <group>
+                <field name="sTipo" />
+                <field name="fPrecio" />
+                <field name="dFecha" />
+              </group>
+            </page>
+            <page name="tramo" String="Tramo perteneciente">
+              <group>
+                <field name="rel_tramo" />
+              </group>
+            </page>
+            <page name="hermano" String="Hermano asociado">
+              <group>
+                <field name="rel_hermano" />
+              </group>
+            </page>
+          </notebook>
         </sheet>
       </form>
     </field>
@@ -25,7 +37,7 @@
             <field name="sTipo" />
             <field name="fPrecio" />
             <field name="dFecha" />
-            <field name="rel_hermano" />
+            <field name="rel_hermano" widget="one2many_tags" options="{'no_create': True, 'display_name': 'sDNI'}"/>
             <field name="rel_tramo" />
       </tree>
     </field>
