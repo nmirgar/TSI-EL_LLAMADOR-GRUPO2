@@ -21,6 +21,11 @@
                           <field name="rel_puntorecorrido"/>
                         </group>  
                       </page>
+                      <page name="datos_tramo" string="Tramos">
+                        <group>
+                          <field name="rel_tramo"/>
+                        </group>  
+                      </page>
                       <page name="datos_mapa" string="Geolocalización">
                         <group>
                           <field name="html_content" widget="html" options="{'readonly': True}" />
