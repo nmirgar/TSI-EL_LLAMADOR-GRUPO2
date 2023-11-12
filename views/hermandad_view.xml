@@ -1,4 +1,5 @@
 <odoo>
+  <!-- Vista form: a mostrar dentro de la Hermandad-->
   <record id="llamador_hermandad_form_view" model="ir.ui.view">
     <field name="name">llamador.hermandad.form</field>
     <field name="model">llamador.hermandad</field>
@@ -22,7 +23,7 @@
             </page>
             <page name="almacen" string="Almacenes">
               <group>
-                <field name="rel_almacen" />
+                <field name="rel_almacen" widget="many2many_tags"/>
               </group>
             </page>
           </notebook>
@@ -31,6 +32,7 @@
     </field>
   </record>
 
+  <!-- Vista tree: a mostrar en el listado de Hermandades  -->
   <record id="llamador_hermandad_tree_view" model="ir.ui.view">
     <field name="name">llamador.hermandad.tree</field>
     <field name="model">llamador.hermandad</field>
@@ -42,22 +44,23 @@
       </tree>
     </field>
   </record>
-<!-- 
-  <record id="llamador_hermandad_graph_view" model="ir.ui.view">
-    <field name="name">llamador.hermandad.graph</field>
+
+  <!-- Vista Calendar -->
+  <record id="llamador_hermandad_calendar_view" model="ir.ui.view">
+    <field name="name">llamador.hermandad.calendar</field>
     <field name="model">llamador.hermandad</field>
     <field name="arch" type="xml">
-      <graph string="Numero de Hermanos por Hermandad" type="bar">
+      <calendar string="Hermandad" date_start="sDia_procesion" mode="month">
         <field name="sNombre" />
-        <field name="rel_hermanos" />
-      </graph>
+      </calendar>
     </field>
-  </record> -->
+  </record>
 
+  <!-- Vista list action -->
   <record id="hermandad_list_action" model="ir.actions.act_window">
     <field name="name">Hermandad</field>
     <field name="res_model">llamador.hermandad</field>
-    <field name="view_mode">tree,form</field>
+    <field name="view_mode">tree,form,calendar</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Crea la primera hermandad</p>
     </field>

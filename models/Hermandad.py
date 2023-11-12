@@ -4,12 +4,11 @@ from odoo import models, fields, api
 class Hermandad(models.Model):
     _name = 'llamador.hermandad' #modulo.modelo
     _description = 'Hermandad registrada'
-    #con guion bajo no se guarda en la base de datos
+    _rec_name = "sNombre" #para visualizar bien en odoo
 
+    #Atributos
     sNombre = fields.Char(string="Nombre Hermandad", required=True, help="Nombre de la hermandad")
-    
-
-    iTlf_cont = fields.Integer('Telefono de contacto',required=True, autodate = True)
+    iTlf_cont = fields.Integer('Telefono de contacto',required=True,store=True)
     sEmail_cont = fields.Char(string="Email de contacto", required=True)
     dFecha_fundacion = fields.Datetime('Fecha fundacion',required=True, autodate = False)
     sDescripcion = fields.Char(string="Descripcion Hermandad", required=True)
@@ -24,6 +23,8 @@ class Hermandad(models.Model):
                                      ('vier','Viernes Santo'),
                                      ('sab','Sábado Santo'),],
                                      'Dia de la semana que le toca salir')
+    
+    #Atributo para poder asignarle el escudo a cada hermandad
     escudo = fields.Binary('Escudo')
 
     #Relaciones

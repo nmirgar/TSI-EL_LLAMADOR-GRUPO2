@@ -25,7 +25,6 @@
         'security/ir.model.access.csv',
         'views/hermandad_view.xml',
         'views/almacen_view.xml',
-        'views/almacen_map_view.xml',
         'views/enseres_view.xml',
         'views/paso_view.xml',
         'views/hermano_view.xml',
