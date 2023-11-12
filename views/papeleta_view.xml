@@ -45,7 +45,6 @@
             <field name="rel_hermano" widget="one2many_tags" options="{'no_create': True, 'display_name': 'sDNI'}"/>
             <field name="rel_tramo" />
             <field name="rel_evento" />
-
       </tree>
     </field>
   </record>
