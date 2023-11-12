@@ -9,8 +9,7 @@ class PuntoRecorrido(models.Model):
     sUbicacion = fields.Char('Ubicación', required=True)
     sPuntoInteres = fields.Char('Punto Interés')
     rel_paso= fields.Many2many("llamador.paso", string="Pasos")
-
-    # 
+    rel_evento = fields.Many2many('llamador.evento', string='Eventos')
     
   
 
