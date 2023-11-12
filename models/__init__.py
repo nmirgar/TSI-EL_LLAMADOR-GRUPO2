@@ -10,3 +10,6 @@ from . import PuntoRecorrido
 from . import Donacion
 from . import Rol
 from . import Papeleta
+from . import Tramo
+from . import Evento
+from . import TipoEvento

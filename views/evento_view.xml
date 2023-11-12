@@ -1,0 +1,38 @@
+<odoo>
+    <record id="llamador_evento_form_view" model="ir.ui.view">
+        <field name="name">llamador.evento.form</field>
+        <field name="model">llamador.evento</field>
+        <field name="arch" type="xml">
+            <form string="Eventos">
+                <sheet layout="auto">
+                    <group>
+                        <field name="sName"/>
+                        <field name="sFecha"/>
+                        <field name="sHora"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="llamador_evento_tree_view" model="ir.ui.view">
+        <field name="name">llamador.evento.tree</field>
+        <field name="model">llamador.evento</field>
+        <field name="arch" type="xml">
+            <tree string="Eventos">
+                <field name="sName"/>
+                <field name="sFecha"/>
+                <field name="sHora"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="evento_list_action" model="ir.actions.act_window">
+        <field name="name">Eventos Llamador</field>
+        <field name="res_model">llamador.evento</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Crea el evento</p>
+        </field>
+    </record>
+</odoo>
