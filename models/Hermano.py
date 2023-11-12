@@ -23,6 +23,5 @@ class Hermano(models.Model):
     #Relaciones
     rel_hermandad = fields.Many2many("llamador.hermandad",string="Hermandad perteneciente")
     rel_rol = fields.Many2many("llamador.rol", string="Rol Hermano")
-    rel_donacion = fields.Many2many("llamador.donacion", string="Donacion Hermano")
+    rel_donacion = fields.One2many("llamador.donacion","rel_hermano", string="Donacion Hermano")
     rel_papeleta= fields.Many2one("llamador.papeleta", string="Papeleta de Sitio")
-

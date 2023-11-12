@@ -30,7 +30,7 @@
       <tree string="tree_string">
         <field name="dFecha" />
         <field name="iCantidad" />
-        <field name="rel_hermano" widget="many2many_tags" options="{'no_create': True, 'display_name': 'sDNI'}"/>
+        <field name="rel_hermano"/>
       </tree>
     </field>
   </record>
