@@ -5,8 +5,7 @@ class Evento(models.Model):
     _description = 'Modelo para los eventos de la hermandad de Semana Santa'
 
     sName = fields.Char(string='Nombre del Evento', required=True)
-    sFecha = fields.Date(string='Fecha del Evento', required=True)
-    sHora = fields.Datetime(string='Hora del Evento', required=True)
+    sFechaHora = fields.Datetime(string='Fecha y Hora del Evento', required=True)
 
     #Relaciones
     rel_tipoevento = fields.Many2one('llamador.tipoevento', string='Tipo de Evento')
