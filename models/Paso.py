@@ -3,6 +3,7 @@ from odoo import models, fields
 class Paso(models.Model):
     _name = 'llamador.paso'
     _description = 'Paso de Semana Santa'
+    _rec_name = "sNombre"
     # sLocalizacion = fields.Char(string="Localización", required=True)
     # geo_localizacion = fields.Char(string="Ubicación Geoespacial")
     # latitude = fields.Float(string='Latitud')
@@ -16,7 +17,7 @@ class Paso(models.Model):
     rel_puntorecorrido= fields.Many2many("llamador.puntorecorrido", string="Puntos de Recorrido")
     rel_tramo = fields.One2many('llamador.tramo', 'rel_paso', string='Tramos')
 
-    html_content = fields.Html(string='Contenido HTML')
+    html_content = fields.Html(string='HTML')
 
     _html_head = """
     <head>
@@ -30,7 +31,7 @@ class Paso(models.Model):
 
     _html_body = """
     <body>
-        <h1>Mapa Sevilla Evangelion</h1>
+        <h1>Mapa Sevilla</h1>
         <div id="googleMap" style="width:100%;height:400px;"></div>
 
         <script>

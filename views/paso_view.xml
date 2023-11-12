@@ -5,22 +5,34 @@
             <field name="model">llamador.paso</field>
             <field name="arch" type="xml">
                 <form>
-                    <group>
-                        <!-- <field name="sLocalizacion"/>
-                        <field name="geo_localizacion"/>
-                        <field name="latitude"/>
-                        <field name="longitude"/> -->
-                        <field name="sNombre"/>
-                        <field name="iNumeroTramos"/>
-                        <field name="iFilasCuadrilla"/>
-                        <field name="iColumnasCuadrilla"/>
-                        <field name="iNumeroCuadrillas"/>
-                        <field name="fPeso"/>
-                        <field name="rel_puntorecorrido"/>
-                    </group>
-                    <group>
-                        <field name="html_content" widget="html" options="{'readonly': True}" />
-                    </group>
+                    <notebook>
+                      <page name="datos_paso" string="Datos Paso">
+                        <group>
+                          <field name="sNombre" />
+                          <field name="iNumeroTramos" />
+                          <field name="iFilasCuadrilla" />
+                          <field name="iColumnasCuadrilla" />
+                          <field name="iNumeroCuadrillas" />
+                          <field name="fPeso" />
+                        </group>  
+                      </page>
+                      <page name="datos_puntorecorrido" string="Puntos Recorrido">
+                        <group>
+                          <field name="rel_puntorecorrido"/>
+                        </group>  
+                      </page>
+                      <page name="datos_tramo" string="Tramos">
+                        <group>
+                          <field name="rel_tramo"/>
+                        </group>  
+                      </page>
+                      <page name="datos_mapa" string="Geolocalización">
+                        <group>
+                          <field name="html_content" widget="html" options="{'readonly': True}" />
+                        </group>
+                      </page>
+                    </notebook> 
+                    
                 </form>
             </field>
         </record>
@@ -36,7 +48,7 @@
         <field name="iColumnasCuadrilla" />
         <field name="iNumeroCuadrillas" />
         <field name="fPeso" />
-        <field name="rel_puntorecorrido"/>
+        <field name="rel_puntorecorrido" widget="many2many_tags"/>
       </tree>
     </field>
   </record>
@@ -64,10 +76,21 @@
     </field>
   </record>
 
+  <record id="llamador_paso_graph_view" model="ir.ui.view">
+    <field name="name">llamador.paso.graph</field>
+    <field name="model">llamador.paso</field>
+    <field name="arch" type="xml">
+      <graph string="Numero de cuadrillas por Paso" type="pie">
+        <field name="sNombre" type="row"/>
+        <field name="iNumeroCuadrillas" type="measure" />
+      </graph>
+    </field>
+  </record>
+
     <record id="paso_list_action" model="ir.actions.act_window">
       <field name="name">Paso</field>
       <field name="res_model">llamador.paso</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">tree,form,graph</field>
       <field name="help" type="html">
         <p class="o_view_nocontent_smiling_face">Crea el primer paso</p>
       </field>

@@ -13,6 +13,5 @@
     <menuitem name="Papeleta" id="papeleta_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="papeleta_list_action"/>
     <menuitem name="Tramo" id="tramo_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="tramo_list_action"/>
     <menuitem name="Evento" id="evento_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="evento_list_action"/>
-    <menuitem name="Tipo Evento" id="tipoevento_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="tipoevento_list_action"/>
     <!-- actions: desplegables -->
 </odoo>

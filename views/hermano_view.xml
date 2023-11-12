@@ -24,10 +24,22 @@
               <page name="Hermandad" string="Hermandad">
                 <group>
                   <field name="rel_hermandad" />
-                  <field name="rel_rol" />
-                  <field name="rel_donacion" />
-                  <field name="rel_papeleta" />
                 </group>
+              </page>
+              <page name="Rol" string="Rol">  
+                <group>
+                  <field name="rel_rol" />
+                </group>
+              </page>
+              <page name="Donacion" string="Donacion">
+                <group>  
+                  <field name="rel_donacion" />
+                </group>  
+              </page>
+              <page name="Papeleta" string="Papeleta">
+                <group>
+                  <field name="rel_papeleta" />
+                </group> 
               </page>
             </notebook>
             <!-- <field name="instructores_id" widget="many2one" /> -->
@@ -51,7 +63,7 @@
         <field name="sApellidos" />
         <field name="sDNI" />            
         <field name="sTlfn" />
-        <field name="rel_rol" widget="many2many" />
+        <field name="rel_rol" widget="many2many_tags"/>
       </tree>
     </field>
   </record>

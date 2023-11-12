@@ -9,7 +9,7 @@ class Hermano(models.Model):
     _name =  'llamador.hermano' 
    
     _description = 'Hermanos de los SS'
-    
+    _rec_name="sDNI"
     sNombre = fields.Char('Nombre', required=True)
     sApellidos = fields.Char('Apellidos', required=True)
     sDNI = fields.Char('DNI', size=9,required=True)

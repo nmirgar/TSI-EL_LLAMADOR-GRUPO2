@@ -4,11 +4,25 @@
         <field name="model">llamador.tramo</field>
         <field name="arch" type="xml">
             <form string="Tramos">
-                <sheet>
-                    <group>
-                        <field name="iNum_tram"/>
-                        <field name="iCap"/>
-                    </group>
+                <sheet layout="auto">
+                    <notebook>
+                        <page name="datos_tramo" string="Datos Tramo">
+                            <group>
+                                <field name="iNum_tram"/>
+                                <field name="iCap"/>
+                            </group>
+                        </page>
+                        <page name="datos_paso" string="Paso">
+                            <group>
+                                <field name="rel_paso"/>
+                            </group>
+                        </page>
+                        <page name="datos_papeleta" string="Papeleta Sitio">
+                            <group>
+                                <field name="rel_papeleta"/>
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -21,6 +35,8 @@
             <tree string="Tramos">
                 <field name="iNum_tram"/>
                 <field name="iCap"/>
+                <field name="rel_papeleta"/>
+                <field name="rel_paso"/>
             </tree>
         </field>
     </record>
