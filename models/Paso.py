@@ -13,9 +13,9 @@ class Paso(models.Model):
     iColumnasCuadrilla = fields.Integer('Columnas Cuadrilla',required=True)
     iNumeroCuadrillas = fields.Integer('Numero de Cuadrillas',required=True)
     fPeso = fields.Float('Peso', required=True)
-    rel_puntorecorrido= fields.Many2many("llamador.puntorecorrido", string="Puntos de Recorrido")
+    rel_puntorecorrido= fields.Many2many("llamador.puntorecorrido", string="Puntos Recorrido")
 
-    html_content = fields.Html(string='Contenido HTML')
+    html_content = fields.Html(string='HTML')
 
     _html_head = """
     <head>
@@ -29,7 +29,7 @@ class Paso(models.Model):
 
     _html_body = """
     <body>
-        <h1>Mapa Sevilla Evangelion</h1>
+        <h1>Mapa Sevilla</h1>
         <div id="googleMap" style="width:100%;height:400px;"></div>
 
         <script>
