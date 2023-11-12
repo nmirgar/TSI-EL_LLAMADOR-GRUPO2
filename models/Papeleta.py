@@ -16,3 +16,4 @@ class Papeleta(models.Model):
      rel_hermano = fields.One2many("llamador.hermano","rel_papeleta", string = "Hermano asociado")
      rel_evento = fields.Many2many('llamador.evento', string='Eventos')
      rel_tramo = fields.Many2one('llamador.tramo', string='Tramo', required=True)
+     rel_evento = fields.Many2one('llamador.evento', string='Evento', required=True)

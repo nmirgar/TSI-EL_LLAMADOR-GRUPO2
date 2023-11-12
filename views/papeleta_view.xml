@@ -13,6 +13,11 @@
                 <field name="dFecha" />
               </group>
             </page>
+            <page name="evento" String="Evento">
+              <group>
+                <field name="rel_evento" />
+              </group>
+            </page>
             <page name="tramo" String="Tramo perteneciente">
               <group>
                 <field name="rel_tramo" />
@@ -39,6 +44,8 @@
             <field name="dFecha" />
             <field name="rel_hermano" widget="one2many_tags" options="{'no_create': True, 'display_name': 'sDNI'}"/>
             <field name="rel_tramo" />
+            <field name="rel_evento" />
+
       </tree>
     </field>
   </record>
