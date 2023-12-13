@@ -9,7 +9,7 @@
             <page name="datos_papeleta" string="Datos Papeleta de Sitio">
               <group>
                 <field name="sTipo" />
-                <field name="fPrecio" />
+                <field name="fPrecio"/>
                 <field name="dFecha" />
               </group>
             </page>
