@@ -25,3 +25,10 @@ class Hermano(models.Model):
     rel_rol = fields.Many2many("llamador.rol", string="Rol Hermano")
     rel_donacion = fields.One2many("llamador.donacion","rel_hermano", string="Donacion Hermano")
     rel_papeleta= fields.Many2one("llamador.papeleta", string="Papeleta de Sitio")
+
+    iNumHermandadesPertenecientes = fields.Integer(compute='_iNumeroHermandadesPertenecientes',string="Numero de Hermandades a las que pertenece",store=True)
+
+    @api.depends('rel_hermandad')
+    def _iNumeroHermandadesPertenecientes(self):
+        for record in self:
+            record.iNumHermandadesPertenecientes = len(record.rel_hermandad)

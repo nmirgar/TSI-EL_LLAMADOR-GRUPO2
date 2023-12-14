@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 class Paso(models.Model):
     _name = 'llamador.paso'
@@ -17,7 +17,26 @@ class Paso(models.Model):
     rel_puntorecorrido= fields.Many2many("llamador.puntorecorrido", string="Puntos de Recorrido")
     rel_tramo = fields.One2many('llamador.tramo', 'rel_paso', string='Tramos')
 
-    html_content = fields.Html(string='HTML')
+
+
+
+    iNumeroCostaleros = fields.Integer(compute='_NumeroCostaleros',string="Numero de costaleros",store=True)
+
+    @api.depends('rel_tramo')
+    def _NumeroCostaleros(self):
+        for record in self:
+            if(record.rel_tramo.rel_papeleta.sTipo == 'tipo3'):
+                record.iNumeroCostaleros += 1
+    
+
+
+
+
+
+
+
+
+    html_content = fields.Html(string='HTML') 
 
     _html_head = """
     <head>
@@ -35,7 +54,6 @@ class Paso(models.Model):
         <div id="googleMap" style="width:100%;height:400px;"></div>
 
         <script>
-            console.log("perra");
             const iconBase ="https://developers.google.com/maps/documentation/javascript/examples/full/images/";
             function myMap() {
                 var mapProp= {

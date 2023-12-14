@@ -49,6 +49,7 @@
         <field name="iNumeroCuadrillas" />
         <field name="fPeso" />
         <field name="rel_puntorecorrido" widget="many2many_tags"/>
+        <field name="iNumeroCostaleros"/>
       </tree>
     </field>
   </record>
@@ -82,7 +83,7 @@
     <field name="arch" type="xml">
       <graph string="Numero de cuadrillas por Paso" type="pie">
         <field name="sNombre" type="row"/>
-        <field name="iNumeroCuadrillas" type="measure" />
+        <field name="iNumeroCostaleros" type="measure" />
       </graph>
     </field>
   </record>

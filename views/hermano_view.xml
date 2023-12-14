@@ -29,6 +29,7 @@
               <page name="Rol" string="Rol">  
                 <group>
                   <field name="rel_rol" />
+                  
                 </group>
               </page>
               <page name="Donacion" string="Donacion">
@@ -64,14 +65,27 @@
         <field name="sDNI" />            
         <field name="sTlfn" />
         <field name="rel_rol" widget="many2many_tags"/>
+        <field name="iNumHermandadesPertenecientes"/>
       </tree>
+    </field>
+  </record>
+
+
+  <record id="llamador_hermano_graph_view" model="ir.ui.view">
+    <field name="name">llamador.hermano.graph</field>
+    <field name="model">llamador.hermano</field>
+    <field name="arch" type="xml">
+      <graph string="Cantidad de roles entre hermanos" type="pie">
+        <field name="sNombre" type="row"/>
+        <field name="iNumHermandadesPertenecientes" type="measure" />
+      </graph>
     </field>
   </record>
 
   <record id="hermano_list_action" model="ir.actions.act_window">
     <field name="name">Hermanos</field>
     <field name="res_model">llamador.hermano</field>
-    <field name="view_mode">tree,form</field>
+    <field name="view_mode">tree,form,graph</field>
     <field name="help" type="html">
       <p class="o_view_nocontent_smiling_face">Crea el primer hermano</p>
     </field>
