@@ -4,7 +4,7 @@ class Papeleta(models.Model):
      _name = 'llamador.papeleta'
      _description = 'Papeleta de sitio de hermandad'
 
-     dFecha = fields.Datetime('Fecha evento',required=True, autodate = True)
+
      sTipo = fields.Selection([('tipo1','Nazareno'),
                                      ('tipo2','Penitente'),
                                      ('tipo3','Costalero'),

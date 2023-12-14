@@ -6,8 +6,8 @@
       <form string="Donaciones">
         <sheet layout="auto">
           <notebook>
-            <page>
-              <group name="datos_donacion" string="Datos Donación">
+            <page name="datos_donacion" string="Datos Donación">
+              <group>
                 <field name="dFecha" />
                 <field name="iCantidad" />
               </group>

@@ -10,7 +10,6 @@
               <group>
                 <field name="sTipo" />
                 <field name="fPrecio"/>
-                <field name="dFecha" />
               </group>
             </page>
             <page name="evento" String="Evento">
@@ -41,7 +40,6 @@
       <tree string="tree_string">
             <field name="sTipo" />
             <field name="fPrecio" />
-            <field name="dFecha" />
             <field name="rel_hermano" widget="one2many_tags" />
             <field name="rel_tramo" />
             <field name="rel_evento" />
