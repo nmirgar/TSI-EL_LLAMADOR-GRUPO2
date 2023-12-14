@@ -12,4 +12,7 @@ class Enseres(models.Model):
     sDescripcion = fields.Char(string="Descripcion del elemento", required=True)
 
     #Relaciones
-    rel_almacen = fields.Many2one("llamador.almacen",string = "Almacen perteneciente")
+    almacen_id = fields.Many2one("llamador.almacen",string = "Almacen perteneciente")
+
+    #Restriccion funcional
+    _sql_constraints = [('enseres_nombre_unique','UNIQUE (sNombre)','El nombre debe ser unico')]

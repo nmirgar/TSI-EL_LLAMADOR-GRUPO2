@@ -28,5 +28,8 @@ class Hermandad(models.Model):
     escudo = fields.Binary('Escudo')
 
     #Relaciones
-    rel_hermanos = fields.Many2many("llamador.hermano", string = "Hermanos pertenecientes")
-    rel_almacen = fields.Many2many("llamador.almacen",string = "Almacenes pertenecientes")
+    hermanos_ids = fields.Many2many("llamador.hermano", string = "Hermanos pertenecientes")
+    almacenes_ids = fields.Many2many("llamador.almacen",string = "Almacenes pertenecientes")
+
+    #Restriccion
+    _sql_constraints = [('hermandad_nombre_unique', 'UNIQUE(sNombre)', 'El nombre debe ser unico')]

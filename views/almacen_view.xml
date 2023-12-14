@@ -14,12 +14,12 @@
           <notebook>
             <page name="hermandades" string="Hermandades">
               <group>
-                <field name="rel_hermandad" />
+                <field name="hermandades_ids" />
               </group>
             </page>
             <page name="enseres" string="Enseres">
               <group>
-                <field name="rel_enseres" />
+                <field name="enseres_ids" />
               </group>
             </page>
           </notebook>

@@ -8,10 +8,8 @@ class Almacen(models.Model):
     #Atributos
     iCapacidad_max=  fields.Integer("Capacidad Maxima") 
     sLocalizacion = fields.Char(string="Localizacion", required=True)
-
-    #Atributo necesario para la implementación de la vista mapa
     geo_localizacion_almacen = fields.Char(string="Ubicación Geoespacial", help = "Coordenadas")
 
     #Relaciones
-    rel_enseres = fields.One2many("llamador.enseres", "rel_almacen",string = "Enseres pertenecientes")
-    rel_hermandad = fields.Many2many("llamador.hermandad", string = "Hermandades pertenecientes")
+    enseres_ids = fields.One2many("llamador.enseres", "almacen_id",string = "Enseres pertenecientes")
+    hermandades_ids = fields.Many2many("llamador.hermandad", string = "Hermandades pertenecientes")
