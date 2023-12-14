@@ -18,12 +18,12 @@
           <notebook>
             <page name="hermanos" string="Hermanos">
               <group>
-                <field name="rel_hermanos" />
+                <field name="hermanos_ids" />
               </group>
             </page>
             <page name="almacen" string="Almacenes">
               <group>
-                <field name="rel_almacen" widget="many2many_tags"/>
+                <field name="almacenes_ids" widget="many2many_tags"/>
               </group>
             </page>
           </notebook>

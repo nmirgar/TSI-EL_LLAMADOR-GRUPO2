@@ -10,7 +10,7 @@
             <field name="sNombre" />
             <field name="iCantidad" />
             <field name="sDescripcion" />
-            <field name="rel_almacen" />
+            <field name="almacen_id" widget="many2one"/>
           </group>
         </sheet>
       </form>
@@ -26,7 +26,7 @@
         <field name="sNombre" />
             <field name="iCantidad" />
             <field name="sDescripcion" />
-            <field name="rel_almacen" />
+            <field name="almacen_id" />
       </tree>
     </field>
   </record>
