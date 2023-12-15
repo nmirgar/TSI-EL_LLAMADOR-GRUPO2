@@ -4,6 +4,9 @@
     <field name="model">llamador.hermano</field>
     <field name="arch" type="xml">
       <form string="Hermanos">
+        <header>
+          <button name="btn_generate_report" string="Generar informe" type="object" class="oe_highlight" />
+        </header>
         <sheet layout="auto">
             <notebook>
               <page name="datos_personales" string="Datos personales">
