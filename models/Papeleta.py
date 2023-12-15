@@ -63,5 +63,9 @@ class Papeleta(models.Model):
                } 
                 
           return resultado
+     
+     def btn_generate_papeleta_report(self):
+          return self.env.ref('llamador.report_papeletas').report_action(self)
+
           
           

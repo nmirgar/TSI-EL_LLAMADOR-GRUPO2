@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- E2. Esquema basico -->
+    <report id="report_papeletas" string="Papeleta Report" model="llamador.papeleta" report_type="qweb-pdf" name="llamador.report_papeleta" />
+
+</odoo>
+    

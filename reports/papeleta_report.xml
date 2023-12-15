@@ -1,0 +1,80 @@
+<odoo>
+    <template id="report_papeleta">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">                    <!-- Probad tambien con web.internal_layout -->
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="row" style="font-size: 24px; margin-bottom: 20px;">
+                            <span style="font-weight: bold; text-decoration: underline; ">DNI:</span>
+                            <span style="color: #999999;" t-field="o.rel_hermano.sDNI" />
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2" style="margin: auto; text-align: center; padding-left: 15px; padding-right: 15px; border-right: 2px solid #cccccc;">
+                                <p style="padding-top: 10px;">
+                                    <img t-if="not o.rel_hermano.foto" t-att-src="'/web/static/src/img/placeholder.png'" height="120" border="1" width="120" />
+                                    <img t-if="o.rel_hermano.foto" t-att-src="'data:image/png;base64,%s' % to_text(o.rel_hermano.foto)" height="120" border="1" width="120" />
+                                </p>
+                                <p t-field="o.rel_hermano.sNombre" style="font-size: 14px; font-weight: bold;" />
+                                <p t-field="o.rel_hermano.sApellidos" style="font-size: 14px; font-weight: bold;" />
+                            </div>
+                            <div class="col-xs-8" style="text-align: left; margin: auto; padding-left: 15px; padding-top: 10px;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                <strong>Precio Papeleta de Sitio: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Tipo: </strong>
+                                            </p>
+                                        </td>
+                                        <td style="padding-left: 10px;">
+                                            <p t-field="o.fPrecio" />
+                                            <p t-field="o.sTipo" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
+                            Datos Papeleta de Sitio <span t-field="o.rel_hermano.sNombre" />
+                        </div>
+                        <div class="row" style="margin-top: 10px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Evento</th>
+                                        <th>Fecha</th>
+                                        <th>Paso</th>
+                                        <th>Tramo</th>
+                                        <th>Recomendaciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p t-field="o.rel_evento.sName" />
+                                        </td>
+                                        <td>
+                                            <p t-field="o.rel_evento.sFechaHora" />
+                                        </td>
+                                        <td>
+                                            <p t-field="o.rel_tramo.rel_paso.sNombre" />
+                                        </td>
+                                        <td>
+                                            <p t-field="o.rel_tramo.iNum_tram" />
+                                        </td>
+                                        <td>
+                                            <p> El hermano deberá asistir al evento con antelación en el punto de encuentro acordado, recomendable 1 hora/45 minutos antes.</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

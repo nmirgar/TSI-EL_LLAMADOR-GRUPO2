@@ -4,6 +4,9 @@
     <field name="model">llamador.papeleta</field>
     <field name="arch" type="xml">
       <form string="Papeletas">
+        <header>
+          <button name="btn_generate_papeleta_report" string="Generar Informe" type="object" class="oe_highlight" />
+        </header>
         <sheet layout="auto">
           <notebook>
             <page name="datos_papeleta" string="Datos Papeleta de Sitio">
