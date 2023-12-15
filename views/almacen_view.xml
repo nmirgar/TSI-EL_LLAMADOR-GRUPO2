@@ -36,6 +36,7 @@
       <tree string="tree_string">
         <field name="iCapacidad_max" />
         <field name="sLocalizacion" />
+        <field name="geo_localizacion_almacen" />
       </tree>
     </field>
   </record>

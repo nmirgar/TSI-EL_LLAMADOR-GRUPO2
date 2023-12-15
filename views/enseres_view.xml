@@ -8,6 +8,7 @@
         <sheet layout="auto">
           <group>
             <field name="sNombre" />
+            <field name="id_enser" />
             <field name="iCantidad" />
             <field name="sDescripcion" />
             <field name="almacen_id" widget="many2one"/>
@@ -27,6 +28,7 @@
             <field name="iCantidad" />
             <field name="sDescripcion" />
             <field name="almacen_id" />
+            <field name="id_enser" />
       </tree>
     </field>
   </record>

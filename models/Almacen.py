@@ -13,3 +13,7 @@ class Almacen(models.Model):
     #Relaciones
     enseres_ids = fields.One2many("llamador.enseres", "almacen_id",string = "Enseres pertenecientes")
     hermandades_ids = fields.Many2many("llamador.hermandad", string = "Hermandades pertenecientes")
+
+    
+    #Restriccion
+    _sql_constraints = [('almacen_localizacion_unique', 'UNIQUE(geo_localizacion_almacen)', 'La localizacion debe ser unica')]
