@@ -1,0 +1,11 @@
+<odoo>
+    <report id="action_llamador_hermano_report" string="Report" model="llamador.hermano"
+        report_type="qweb-pdf" name="hermano.llamador_hermano_template" />
+    <template id="llamador_hermano_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">Este es el contenido xulo.</div>
+            </t>
+        </t>
+    </template>
+</odoo> 
