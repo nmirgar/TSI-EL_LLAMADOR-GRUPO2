@@ -17,3 +17,19 @@ class Enseres(models.Model):
 
     #Restriccion funcional
     _sql_constraints = [('enseres_nombre_unique','UNIQUE (sNombre)','El nombre debe ser unico')]
+
+    #Funciones
+    @api.constrains('sNombre')
+    def _check_nombre(self):
+        if len(self.sNombre) > 60:
+           raise models.ValidationError("La longitud de la cadena Nombre no puede ser superior a 60 caracteres")
+    
+    @api.constrains("iCantidad")
+    def _check_cantidad(self):
+        if self.iCantidad < 0:
+            raise models.ValidationError("La cantidad debe ser un valor positivo")
+        
+    @api.constrains('sDescripcion')
+    def _check_descripcion(self):
+        if len(self.sDescripcion) > 250:
+           raise models.ValidationError("La longitud de la cadena Descripcion no puede ser superior a 250 caracteres")
