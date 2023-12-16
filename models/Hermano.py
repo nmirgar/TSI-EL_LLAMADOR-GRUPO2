@@ -26,13 +26,28 @@ class Hermano(models.Model):
     rel_donacion = fields.One2many("llamador.donacion","rel_hermano", string="Donacion Hermano")
     rel_papeleta= fields.Many2one("llamador.papeleta", string="Papeleta de Sitio")
 
-    #ORM
+    #orm - compute
     iNumHermandadesPertenecientes = fields.Integer(compute='_iNumeroHermandadesPertenecientes',string="Numero de Hermandades a las que pertenece",store=True)
 
     @api.depends('rel_hermandad')
     def _iNumeroHermandadesPertenecientes(self):
         for record in self:
             record.iNumHermandadesPertenecientes = len(record.rel_hermandad)
+
+    #orm - on change
+            
+    @api.onchange('sTlfn')
+    def onchange_tlfn(self):
+          if len(self.sTlfn) != 9 and self.sDNI != False    : # el false de idcard sirve para que no se ejecute el onchange al pulsar el boton "Create"
+               raise models.ValidationError('El teléfono debe contener 9 dígitos.')
+    @api.onchange('fPeso')
+    def onchange_peso(self):
+          if self.fPeso <=0 and self.sDNI != False    : # el false de dni sirve para que no se ejecute el onchange al pulsar el boton "Create"
+               raise models.ValidationError('El peso debe ser positivo.')
+    @api.onchange('fAltura')
+    def onchange_altura(self):
+          if self.fAltura <=0 and self.sDNI != False    : # el false de dni sirve para que no se ejecute el onchange al pulsar el boton "Create"
+               raise models.ValidationError('La altura debe ser positiva.')
 
     #Report
     def btn_generate_report(self):
