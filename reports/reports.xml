@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- E2. Esquema basico -->
+    <report id="report_hermano" string="Report" model="llamador.hermano" report_type="qweb-pdf" name="llamador.llamador_hermano_template" />
+
+    <!-- E3 -->
+
+
+</odoo>
