@@ -38,15 +38,15 @@ class Hermano(models.Model):
             
     @api.onchange('sTlfn')
     def onchange_tlfn(self):
-          if len(self.sTlfn) != 9 and self.sDNI != False    : # el false de idcard sirve para que no se ejecute el onchange al pulsar el boton "Create"
+          if self.sTlfn and len(self.sTlfn) != 9     : # el false de idcard sirve para que no se ejecute el onchange al pulsar el boton "Create"
                raise models.ValidationError('El teléfono debe contener 9 dígitos.')
     @api.onchange('fPeso')
     def onchange_peso(self):
-          if self.fPeso <=0 and self.sDNI != False    : # el false de dni sirve para que no se ejecute el onchange al pulsar el boton "Create"
+          if self.fPeso <0 and self.sDNI != False    : # el false de dni sirve para que no se ejecute el onchange al pulsar el boton "Create"
                raise models.ValidationError('El peso debe ser positivo.')
     @api.onchange('fAltura')
     def onchange_altura(self):
-          if self.fAltura <=0 and self.sDNI != False    : # el false de dni sirve para que no se ejecute el onchange al pulsar el boton "Create"
+          if self.fAltura <0 and self.sDNI != False    : # el false de dni sirve para que no se ejecute el onchange al pulsar el boton "Create"
                raise models.ValidationError('La altura debe ser positiva.')
 
     #Report
