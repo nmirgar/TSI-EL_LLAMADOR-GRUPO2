@@ -5,6 +5,9 @@
     <field name="model">llamador.almacen</field>
     <field name="arch" type="xml">
       <form string="Almacen">
+        <header>
+          <button name="btn_generate_report" string="Generar informe" type="object" class="oe_highlight" />
+        </header>
         <sheet>
           <group>
             <field name="iCapacidad_max" />
