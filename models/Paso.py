@@ -22,14 +22,28 @@ class Paso(models.Model):
 
     iNumeroCostaleros = fields.Integer(compute='_NumeroCostaleros',string="Numero de costaleros",store=True)
 
+    #orm - compute
+    
     @api.depends('rel_tramo')
     def _NumeroCostaleros(self):
         for record in self:
             if(record.rel_tramo.rel_papeleta.sTipo == 'tipo3'):
                 record.iNumeroCostaleros += 1
     
-
-
+    #orm - on change
+                
+    @api.onchange('iFilasCuadrilla')
+    def onchange_filasCuadrilla(self):
+          if self.iFilasCuadrilla > self.iColumnasCuadrilla and self.sNombre != False    : # el false de dni sirve para que no se ejecute el onchange al pulsar el boton "Create"
+               raise models.ValidationError('Las filas deben ser menores o iguales a las columnas.')
+    @api.onchange('iColumnasCuadrilla')
+    def onchange_columnasCuadrilla(self):
+          if self.iColumnasCuadrilla > self.iFilasCuadrilla and self.sNombre != False    : # el false de dni sirve para que no se ejecute el onchange al pulsar el boton "Create"
+               raise models.ValidationError('Las columnas deben ser menores o iguales a las columnas.')
+    @api.onchange('fPeso')
+    def onchange_peso(self):
+          if self.fPeso <=0 and self.sNombre != False    : # el false de dni sirve para que no se ejecute el onchange al pulsar el boton "Create"
+               raise models.ValidationError('El peso debe ser positivo.')
 
 
 
