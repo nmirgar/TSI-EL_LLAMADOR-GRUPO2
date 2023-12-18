@@ -5,6 +5,9 @@
     <field name="model">llamador.almacen</field>
     <field name="arch" type="xml">
       <form string="Almacen">
+        <header>
+          <button name="btn_generate_report" string="Generar informe" type="object" class="oe_highlight" />
+        </header>
         <sheet>
           <group>
             <field name="iCapacidad_max" />
@@ -12,14 +15,18 @@
             <field name="geo_localizacion_almacen" />
           </group>
           <notebook>
-            <page name="hermandades" string="Hermandades">
-              <group>
-                <field name="rel_hermandad" />
-              </group>
-            </page>
             <page name="enseres" string="Enseres">
               <group>
-                <field name="rel_enseres" />
+                <field name="enseres_ids" />
+                <newline></newline>
+                <button name="btn_vaciarAlmacen" string="Vaciar Almacén" type="object" class="oe_highlight" />
+              </group>
+            </page>
+            <page name="hermandades" string="Hermandades">
+              <group>
+                <field name="hermandades_ids" />
+                <newline></newline>
+                <button name="btn_desasociarHermandades" string="Desasociar Hermandades" type="object" class="oe_highlight" />
               </group>
             </page>
           </notebook>
@@ -36,7 +43,21 @@
       <tree string="tree_string">
         <field name="iCapacidad_max" />
         <field name="sLocalizacion" />
+        <field name="geo_localizacion_almacen" />
+        <field name="iNumEnseres" />
       </tree>
+    </field>
+  </record>
+
+  <!-- Vista search  -->
+  <record id="llamador_almacen_search_view" model="ir.ui.view">
+    <field name="name">llamador.almacen.search</field>
+    <field name="model">llamador.almacen</field>
+    <field name="arch" type="xml">
+      <search>
+        <filter name="search_capacity" string="Capacidad > 50" domain="[('iCapacidad_max','>',50)]" />
+        <separator orientation="vertical" />
+      </search>
     </field>
   </record>
   

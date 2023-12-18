@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- E2. Esquema basico -->
+    
     <report id="report_papeletas" string="Papeleta Report" model="llamador.papeleta" report_type="qweb-pdf" name="llamador.report_papeleta" />
 
-</odoo>
+    <report id="report_hermano" string="Report" model="llamador.hermano" report_type="qweb-pdf" name="llamador.llamador_hermano_template" />
     
+    <report id="report_hermandad" string="Report" model="llamador.hermandad" report_type="qweb-pdf" name="llamador.llamador_hermandad_template" />
+
+</odoo>
+
