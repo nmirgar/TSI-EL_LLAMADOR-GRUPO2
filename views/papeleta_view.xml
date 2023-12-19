@@ -4,14 +4,33 @@
     <field name="model">llamador.papeleta</field>
     <field name="arch" type="xml">
       <form string="Papeletas">
+        <header>
+          <button name="btn_generate_papeleta_report" string="Generar Informe" type="object" class="oe_highlight" />
+        </header>
         <sheet layout="auto">
-          <group>
-            <field name="sTipo" />
-            <field name="fPrecio" />
-            <field name="dFecha" />
-            <field name="rel_hermano" />
-            <field name="rel_tramo" />
-          </group>
+          <notebook>
+            <page name="datos_papeleta" string="Datos Papeleta de Sitio">
+              <group>
+                <field name="sTipo" />
+                <field name="fPrecio"/>
+              </group>
+            </page>
+            <page name="evento" String="Evento">
+              <group>
+                <field name="rel_evento" />
+              </group>
+            </page>
+            <page name="tramo" String="Tramo perteneciente">
+              <group>
+                <field name="rel_tramo" />
+              </group>
+            </page>
+            <page name="hermano" String="Hermano asociado">
+              <group>
+                <field name="rel_hermano" />
+              </group>
+            </page>
+          </notebook>
         </sheet>
       </form>
     </field>
@@ -24,9 +43,9 @@
       <tree string="tree_string">
             <field name="sTipo" />
             <field name="fPrecio" />
-            <field name="dFecha" />
-            <field name="rel_hermano" />
+            <field name="rel_hermano" widget="one2many_tags" />
             <field name="rel_tramo" />
+            <field name="rel_evento" />
       </tree>
     </field>
   </record>
