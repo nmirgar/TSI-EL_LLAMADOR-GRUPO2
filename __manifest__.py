@@ -27,6 +27,7 @@
         'reports/papeleta_report.xml',  
         'reports/hermano_reports.xml',
         'reports/hermandad_report.xml',
+        'reports/almacen_report.xml',
         'views/hermandad_view.xml',
         'views/almacen_view.xml',
         'views/enseres_view.xml',

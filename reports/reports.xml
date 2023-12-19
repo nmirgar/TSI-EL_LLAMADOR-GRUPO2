@@ -6,6 +6,7 @@
     <report id="report_hermano" string="Report" model="llamador.hermano" report_type="qweb-pdf" name="llamador.llamador_hermano_template" />
     
     <report id="report_hermandad" string="Report" model="llamador.hermandad" report_type="qweb-pdf" name="llamador.llamador_hermandad_template" />
+    <report id="report_almacen" string="Report" model="llamador.almacen" report_type="qweb-pdf" name="llamador.llamador_almacen_template" />
 
 </odoo>
 
