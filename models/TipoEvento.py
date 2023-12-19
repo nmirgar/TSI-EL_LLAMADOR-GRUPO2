@@ -8,3 +8,7 @@ class TipoEvento(models.Model):
     sColor = fields.Char(string='Color', default='#800080')
 
     rel_evento = fields.One2many('llamador.evento', 'rel_tipoevento', string='Eventos')
+
+    _sql_constraints = [('tipoevento_sTipo_unique','UNIQUE (sTipo)','El tipo de evento debe ser único')]
+
+   
