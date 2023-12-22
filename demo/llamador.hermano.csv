@@ -1,3 +1,4 @@
-sNombre,sApellidos,sDNI,sTlfn,sEMail,sDireccion,fPeso,fAltura
-"Joaquin","Pérez Reyes","49303615x","69360913","joaquireyes@gmail.es","c/Urbanizacion Sector Cuadrado 15",60.3,1.67
-"Evangelino","Bravo Santos","555515x","62532321","evangelinob3@gmail.es","c/Cristo Medinaceli 23",70.9,1.68
+id,sNombre,sApellidos,sDNI,sTlfn,sEMail,sDireccion,fPeso,fAltura,rel_rol/id,
+hermano0,"Joaquin","Pérez Reyes","49303615x","69360913","joaquireyes@gmail.es","c/Urbanizacion Sector Cuadrado 15",60.3,1.67,"rol0"
+hermano1,"Evangelino","Bravo Santos","555515x","62532321","evangelinob3@gmail.es","c/Cristo Medinaceli 23",70.9,1.68,"rol1"
+hermano2,"Fran","Lengua Yollas","471015x","63532321","franyengua3@gmail.es","c/Cristo Redentor 23",80.9,1.83,"rol2"
