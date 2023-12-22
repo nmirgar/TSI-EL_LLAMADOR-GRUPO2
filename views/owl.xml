@@ -5,8 +5,9 @@
 
   </record>
 
-  <record id="action_E1Componente_js" model="ir.actions.client">
-    <field name="name">E1Componente OWL</field>
-    <field name="tag">owl.action_E1Componente_js</field>
+  <!-- Visualizacion de noticias de la Semana Santa -->
+  <record id="action_Noticias_js" model="ir.actions.client">
+    <field name="name">Noticias OWL</field>
+    <field name="tag">owl.action_Noticias_js</field>
   </record>
 </odoo>

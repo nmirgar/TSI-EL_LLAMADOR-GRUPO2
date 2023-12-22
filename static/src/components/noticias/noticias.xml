@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve"> 
+  <t t-name="owl.Noticias" owl="1"> 
+    <div id="noticias-container">
+        <h2>Últimas Noticias</h2>
+            <ul>
+                <li><a href="https://www.sevilla.org/fiestas-de-la-ciudad/semana-santa/noticias">Noticias Semana Santa Ayuntamiento de Sevilla</a></li>
+                <li><a href="https://sevilla.abc.es/pasionensevilla/">Pasion en Sevilla - ABC</a></li>
+                <li><a href="https://www.elmundo.es/t/se/semana-santa-sevilla.html">Noticias Semana Santa - EL MUNDO</a></li>
+                <li><a href="https://elpais.com/noticias/semana-santa-sevilla/">Noticias Semana Santa - EL PAIS</a></li>
+                <li><a href="https://cadenaser.com/tag/semana_santa_sevilla/a/">Noticias Semana Santa - Cadena Ser</a></li>
+            </ul>
+        <img src="https://cadenaser.com/resizer/TO732fxWO0661C24luNU4jyVYr0=/736x552/filters:format(jpg):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/prisaradio/CBNNMGTH2PC7YDE5SFF7AISSMM.jpg" >
+    </div>
+ </t> 
+</templates>

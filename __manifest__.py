@@ -51,9 +51,9 @@
     ],
     'assets':{
     	'web.assets_backend': [
-            'llamador/static/src/components/*/*.js',
-            'llamador/static/src/components/*/*.xml',
-            'llamador/static/src/components/*/*.scss',
+            'el__llamador/static/src/components/*/*.js',
+            'el__llamador/static/src/components/*/*.xml',
+            'el__llamador/static/src/components/*/*.scss',
     	],
     },
     'application': True,
