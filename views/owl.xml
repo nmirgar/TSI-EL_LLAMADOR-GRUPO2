@@ -1,0 +1,12 @@
+<odoo>
+  <record id="action_App_js" model="ir.actions.client">
+    <field name="name">MAPA OWL</field>
+    <field name="tag">owl.action_App_js</field>
+
+  </record>
+
+  <record id="action_E1Componente_js" model="ir.actions.client">
+    <field name="name">E1Componente OWL</field>
+    <field name="tag">owl.action_E1Componente_js</field>
+  </record>
+</odoo>

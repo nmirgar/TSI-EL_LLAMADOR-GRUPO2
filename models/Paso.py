@@ -9,27 +9,36 @@ class Paso(models.Model):
     # latitude = fields.Float(string='Latitud')
     # longitude = fields.Float(string='Longitud')
     sNombre = fields.Char('Nombre', required=True)
-    iNumeroTramos = fields.Integer('Numero de Tramos',required=True)
     iFilasCuadrilla = fields.Integer('Filas Cuadrilla',required=True)
     iColumnasCuadrilla = fields.Integer('Columnas Cuadrilla',required=True)
     iNumeroCuadrillas = fields.Integer('Numero de Cuadrillas',required=True)
     fPeso = fields.Float('Peso', required=True)
+
+    #Relaciones
     rel_puntorecorrido= fields.Many2many("llamador.puntorecorrido", string="Puntos de Recorrido")
     rel_tramo = fields.One2many('llamador.tramo', 'rel_paso', string='Tramos')
 
 
 
 
-    iNumeroCostaleros = fields.Integer(compute='_NumeroCostaleros',string="Numero de costaleros",store=True)
 
     #orm - compute
-    
+
+    iNumeroCostaleros = fields.Integer(compute='_NumeroCostaleros',string="Numero de costaleros",store=True)
+
     @api.depends('rel_tramo')
     def _NumeroCostaleros(self):
         for record in self:
             if(record.rel_tramo.rel_papeleta.sTipo == 'tipo3'):
                 record.iNumeroCostaleros += 1
     
+    iNumeroTramos = fields.Integer(compute='_NumeroTramos',string='Numero de Tramos',required=True)
+
+    @api.depends('iNumeroTramos')
+    def _NumeroTramos(self):
+         for record in self:
+              record.iNumeroTramos = len(record.rel_tramo)
+
     #orm - on change
                 
     @api.onchange('iFilasCuadrilla')
@@ -45,6 +54,21 @@ class Paso(models.Model):
           if self.fPeso <=0 and self.sNombre != False    : # el false de dni sirve para que no se ejecute el onchange al pulsar el boton "Create"
                raise models.ValidationError('El peso debe ser positivo.')
 
+
+    #orm - constrains
+    @api.constrains('sNombre')
+    def _check_nombre(self):
+        if len(self.sNombre) < 0 :
+             raise models.ValidationError("La longitud del nombre no puede ser superior a 40 caracteres o inferior a 0")
+    @api.constrains('fPeso')
+    def _check_nombre(self):
+        if self.fPeso <=0:
+             raise models.ValidationError("El peso debe ser positivo")
+
+    #orm - button
+          
+    def btn_delete_puntosRecorrido(self):
+         self.write({'rel_puntorecorrido': [(5,)]})
 
 
 

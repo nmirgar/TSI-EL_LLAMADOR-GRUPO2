@@ -5,6 +5,9 @@
             <field name="model">llamador.paso</field>
             <field name="arch" type="xml">
                 <form>
+                  <header>
+                    <button name="btn_delete_puntosRecorrido" string="ELIMINAR PUNTOS DE RECORRIDO" type="object" class="oe_highlight"></button>
+                  </header>
                     <notebook>
                       <page name="datos_paso" string="Datos Paso">
                         <group>

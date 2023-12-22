@@ -41,6 +41,7 @@
         'views/tramo_view.xml',
         'views/evento_view.xml',
         'views/tipoevento_view.xml',
+        'views/owl.xml',
         'views/menus.xml',
      
     ],
@@ -48,4 +49,12 @@
     'demo': [
         'demo/llamador.hermano.csv',
     ],
+    'assets':{
+    	'web.assets_backend': [
+            'llamador/static/src/components/*/*.js',
+            'llamador/static/src/components/*/*.xml',
+            'llamador/static/src/components/*/*.scss',
+    	],
+    },
+    'application': True,
 }
