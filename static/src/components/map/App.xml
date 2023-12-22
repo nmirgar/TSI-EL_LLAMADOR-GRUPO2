@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve"> 
+  <t t-name="owl.App" owl="1"> 
+    <div class="box">
+      <h1 class="header">Localización en tiempo real</h1>
+      <iframe width="888" height="666" src="https://www.openstreetmap.org/export/embed.html?bbox=-5.997376441955566%2C37.369475057981134%2C-5.957207679748536%2C37.39307301476918&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=15/37.3813/-5.9773">Ver el mapa más grande</a></small>
+    </div>
+ </t> 
+</templates>  

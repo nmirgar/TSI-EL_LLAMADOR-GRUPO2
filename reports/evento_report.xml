@@ -10,7 +10,7 @@
                             <span t-field="o.sName" style="font-size: 24px;" />
 
                             <span style= "font-size: 15px; front-style: italic;">Estado:</span>
-                            <span t-field="o.sEstado" style= "font-style: italic;font-size: 15px;"/>
+                          <!--  <span t-field="o.sEstado" style= "font-style: italic;font-size: 15px;"/>--> 
                         </div>
                         <div class="row">
                             <div class="col-xs-8" style="text-align: left; margin: auto; padding-left: 15px; padding-top: 10px;">

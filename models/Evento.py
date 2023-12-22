@@ -7,7 +7,7 @@ class Evento(models.Model):
 
     sName = fields.Char(string='Nombre del Evento', required=True)
     sFechaHora = fields.Datetime(string='Fecha y Hora del Evento', required=True)
-    sEstado = fields.Char(compute='_estadoEvento', string='Estado', store=True)
+    #sEstado = fields.Char(compute='_estadoEvento', string='Estado', store=True)
 
     #Relaciones
     rel_tipoevento = fields.Many2one('llamador.tipoevento', string='Tipo de Evento')
@@ -18,14 +18,14 @@ class Evento(models.Model):
 
     def btn_marcar_completado(self):
           self.write({'sEstado':"Completado"})
-
-    @api.constrains('sFechaHora')
+    
+    """@api.constrains('sFechaHora')
     def _estadoEvento(self):
         for x in self:
             if x.sFechaHora < fields.Datetime.now() + timedelta(days=7):
                 x.sEstado = 'Proximo'
             else:
-                x.evento.sEstado = 'Futuro'
+                x.evento.sEstado = 'Futuro'"""
     
     @api.constrains('sFechaHora')
     def _check_fechahora(self):

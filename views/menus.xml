@@ -5,6 +5,7 @@
     <!-- menu categories: la barra -->
     <menuitem name="Hermanos" id="hermanos_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="hermano_list_action"/>
     <menuitem name="Paso" id="paso_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="paso_list_action"/>
+    <menuitem name="Mapa" id="mapa_menu_owl" parent="main_llamador_menu" groups="group_llamador_manager" action="action_App_js"/> 
     <menuitem name="Hermandad" id="hermandad_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="hermandad_list_action"/>
     <menuitem name="Almacen" id="almacen_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="almacen_list_action"/>
     <menuitem name="Donacion" id="donacion_menu" parent="main_llamador_menu" groups="group_llamador_manager" action="donacion_list_action"/>
