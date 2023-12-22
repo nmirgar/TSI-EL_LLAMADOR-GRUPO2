@@ -80,3 +80,6 @@ class Hermandad(models.Model):
 
     def btn_desapuntarHermanos(self):
         self.write({'hermanos_ids': [(5,)]})
+
+    def btn_generate_report(self):
+          return self.env.ref('llamador.report_hermandad').report_action(self)

@@ -1,5 +1,4 @@
 from odoo import models, fields, api
-#from odoo.exceptions import ValidationError
 
 class Almacen(models.Model):
     _name = 'llamador.almacen' #modulo.modelo
@@ -57,3 +56,6 @@ class Almacen(models.Model):
     
     def btn_desasociarHermandades(self):
         self.write({'hermandades_ids': [(5,)]})
+    
+    def btn_generate_report(self):
+        return self.env.ref('llamador.report_almacen').report_action(self)

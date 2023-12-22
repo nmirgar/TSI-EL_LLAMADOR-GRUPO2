@@ -1,0 +1,135 @@
+<odoo>
+    <template id="llamador_hermandad_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="row" style="font-size: 24px; margin-bottom: 20px;">
+                            <span style="font-weight: bold; text-decoration: underline; ">Hermandad:</span>
+                            <span style="color: #999999;" t-field="o.sNombre" />
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2" style="margin: auto; text-align: center; padding-left: 15px; padding-right: 15px; border-right: 2px solid #cccccc;">
+                                <p style="padding-top: 10px;">
+                                    <img t-if="not o.escudo" t-att-src="'/web/static/src/img/placeholder.png'" height="120" border="1" width="120" />
+                                    <img t-if="o.escudo" t-att-src="'data:image/png;base64,%s' % to_text(o.escudo)" height="120" border="1" width="120" />
+                                </p>
+                                <p t-field="o.sNombre" style="font-size: 14px; font-weight: bold;" />
+                            </div>
+                            <div class="col-xs-8" style="text-align: left; margin: auto; padding-left: 15px; padding-top: 10px;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                <strong>Descripcion: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Dia Procesion: </strong>
+                                            </p>
+                                            <p>
+                                                <span>Telefono de contacto: </span>
+                                            </p>
+                                            <p>
+                                                <span>Email de contacto: </span>
+                                            </p>
+                                            <p>
+                                                <span>Fecha fundacion: </span>
+                                            </p>
+                                            <p t-if="o.hermanos_ids">
+                                                <strong>Numero de Hermanos pertenecientes: </strong>
+                                            </p>
+                                            <p t-if="o.almacenes_ids">
+                                                <strong>Numero de Almacenes pertenecientes: </strong>
+                                            </p>
+                                        </td>
+                                        <td style="padding-left: 10px;">
+                                            <p t-field="o.sDescripcion" />
+                                            <p t-field="o.sDia_procesion" />
+                                            <p t-field="o.iTlf_cont" />
+                                            <p t-field="o.sEmail_cont" />
+                                            <p t-field="o.dFecha_fundacion" />
+                                            <p t-if="o.hermanos_ids" t-field="o.iNumHermanos" />
+                                            <p t-if="o.almacenes_ids" t-field="o.iNumAlmacenes" />
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div t-if="o.hermanos_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
+                            Hermanos pertenecientes de<span t-field="o.sNombre" />
+                        </div>
+                        <div t-if="o.hermanos_ids" id="clases_reservadas" class="row" style="margin-top: 10px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th> <strong>DNI </strong></th>
+                                        <th>Nombre </th>
+                                        <th>Apellidos</th>
+                                        <th>Telefono</th>
+                                        <th>Email</th>
+                                        <th>Direccion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.hermanos_ids" t-as="hermanos">
+                                        <tr>
+                                            <td>
+                                                <p t-field="hermanos.sDNI" />
+                                            </td>
+                                            <td>
+                                                <p t-field="hermanos.sNombre" />
+                                            </td>
+                                            <td>
+                                                <p t-field="hermanos.sApellidos" />
+                                            </td>
+                                            <td>
+                                                <p t-field="hermanos.sTlfn" />
+                                            </td>
+                                            <td>
+                                                <p t-field="hermanos.sEmail" />
+                                            </td>
+                                            <td>
+                                                <p t-field="hermanos.sDireccion" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div t-if="o.almacenes_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
+                            Almacenes pertenecientes de<span t-field="o.sNombre" />
+                        </div>
+                        <div t-if="o.almacenes_ids" id="clases_reservadas" class="row" style="margin-top: 10px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th><strong>Localizacion </strong></th>
+                                        <th>Capacidad maxima</th>
+                                        <th>Geolocalizacion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.almacenes_ids" t-as="almacen">
+                                        <tr>
+                                            <td>
+                                                <p t-field="almacen.sLocalizacion" />
+                                            </td>
+                                            <td>
+                                                <p t-field="almacen.iCapacidad_max" />
+                                            </td>
+                                            <td>
+                                                <p t-field="almacen.geo_localizacion_almacen" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo> 

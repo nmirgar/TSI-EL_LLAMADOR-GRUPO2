@@ -9,14 +9,16 @@
                         <group>
                             <field name="sName"/>
                             <field name="sFechaHora"/>
+                            <field name="sEstado"/>
                             <field name="rel_tipoevento"/>
+                            <button name="btn_marcar_completado" string="Marcar como completado" type="object" class="oe_highlight"/>
                         </group>
                     </page>
                     <page name="datos_puntorecorrido" string="Puntos Recorrido">
                         <group>
                             <field name="rel_puntorecorrido"/>
                         </group>
-                    </page>
+                    </page> 
                     <page name="datos_papeleta" string="Papeleta Sitio">
                         <group>
                             <field name="rel_papeleta"/>

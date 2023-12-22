@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- E2. Esquema basico -->
+    
+    <report id="report_papeletas" string="Papeleta Report" model="llamador.papeleta" report_type="qweb-pdf" name="llamador.report_papeleta" />
+
     <report id="report_hermano" string="Report" model="llamador.hermano" report_type="qweb-pdf" name="llamador.llamador_hermano_template" />
+    
+    <report id="report_hermandad" string="Report" model="llamador.hermandad" report_type="qweb-pdf" name="llamador.llamador_hermandad_template"/>
+    
+    <report id="report_almacen" string="Report" model="llamador.almacen" report_type="qweb-pdf" name="llamador.llamador_almacen_template"/> 
 
-    <!-- E3 -->
-
-
+    <report id="report_evento" string="Evento Report" model="llamador.evento" report_type="qweb-pdf" name="llamador.llamador_evento_template" />
 </odoo>
+

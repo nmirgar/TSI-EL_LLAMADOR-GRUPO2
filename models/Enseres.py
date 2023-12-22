@@ -7,7 +7,7 @@ class Enseres(models.Model):
     _rec_name = "sNombre" #para visualizar bien en odoo
 
     #Atributos
-    id_enser = fields.Integer(required=True, readonly=True, copy=True, index=True, string="ID Articulo")
+    id_enser = fields.Integer(compute='_calculaIDs',string='ID del enser',readonly=True)
     sNombre = fields.Char(string="Nombre del elemento", required=True, help="Nombre del enser")
     iCantidad=  fields.Integer("Cantidad") 
     sDescripcion = fields.Char(string="Descripcion del elemento", required=True)
@@ -17,6 +17,12 @@ class Enseres(models.Model):
 
     #Restriccion funcional
     _sql_constraints = [('enseres_nombre_unique','UNIQUE (sNombre)','El nombre debe ser unico')]
+
+    #Campo calculado para hallar el id
+    @api.depends('id_enser')
+    def _calculaIDs(self):
+        for record in self:
+            record.id_enser = record.id
 
     #Funciones
     @api.constrains('sNombre')

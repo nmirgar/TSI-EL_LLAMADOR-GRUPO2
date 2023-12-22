@@ -24,7 +24,11 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'reports/reports.xml',
+        'reports/almacen_report.xml',
+        'reports/evento_report.xml',
+        'reports/papeleta_report.xml',  
         'reports/hermano_reports.xml',
+        'reports/hermandad_report.xml',
         'views/hermandad_view.xml',
         'views/almacen_view.xml',
         'views/enseres_view.xml',
@@ -37,7 +41,8 @@
         'views/tramo_view.xml',
         'views/evento_view.xml',
         'views/tipoevento_view.xml',
-        'views/menus.xml',        
+        'views/menus.xml',
+     
     ],
     # only loaded in demonstration mode
     'demo': [
