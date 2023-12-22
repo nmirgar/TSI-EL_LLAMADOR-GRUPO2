@@ -9,7 +9,7 @@
                         <group>
                             <field name="sName"/>
                             <field name="sFechaHora"/>
-                            <!-- <field name="sEstado"/>--> 
+                            <field name="sEstado"/> 
                             <field name="rel_tipoevento"/>
                             <button name="btn_marcar_completado" string="Marcar como completado" type="object" class="oe_highlight"/>
                         </group>
