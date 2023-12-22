@@ -7,7 +7,7 @@ class Evento(models.Model):
 
     sName = fields.Char(string='Nombre del Evento', required=True)
     sFechaHora = fields.Datetime(string='Fecha y Hora del Evento', required=True)
-    #sEstado = fields.Char(compute='_estadoEvento', string='Estado', store=True)
+    sEstado = fields.Char(compute='_estadoEvento', string='Estado', store=True)
 
     #Relaciones
     rel_tipoevento = fields.Many2one('llamador.tipoevento', string='Tipo de Evento')
