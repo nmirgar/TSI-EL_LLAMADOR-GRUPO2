@@ -1,0 +1,4 @@
+id,sNombre,iTlf_cont,sEmail_cont,dFecha_fundacion,sDescripcion,sDia_procesion,hermanos_ids/id,almacenes_ids/id
+hermandad0,"La Paz","954232961","hermandad@hermandaddelapaz.org","1939-01-01 23:59:59", "Descripcion de la Hermandad 0",,"almacen1,almacen2","hermano0,hermano1"
+hermandad1,"la Esperanza de Triana","954332645",,"1418-01-01 23:59:59", "Descripcion de la Hermandad 1",,"almacen0,almacen2","hermano0,hermano1,hermano2"
+hermandad2,"San Benito","954535455",,"1554-07-18 23:59:59", "Descripcion de la Hermandad 2",,"almacen1","hermano2"

@@ -11,11 +11,6 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-2" style="margin: auto; text-align: center; padding-left: 15px; padding-right: 15px; border-right: 2px solid #cccccc;">
-                                <p style="padding-top: 10px;">
-                                    <img t-if="not o.escudo" t-att-src="'/web/static/src/img/placeholder.png'" height="120" border="1" width="120" />
-                                    <img t-if="o.escudo" t-att-src="'data:image/png;base64,%s' % to_text(o.escudo)" height="120" border="1" width="120" />
-                                </p>
-                                <p t-field="o.sNombre" style="font-size: 14px; font-weight: bold;" />
                             </div>
                             <div class="col-xs-8" style="text-align: left; margin: auto; padding-left: 15px; padding-top: 10px;">
                                 <table>
@@ -46,7 +41,7 @@
                             </div>
                         </div>
                         <div t-if="o.hermandades_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
-                            Hermandades pertenecientes del almacen<span t-field="o.sLocalizacion" />
+                            Hermandades pertenecientes del almacen <span t-field="o.sLocalizacion" />
                         </div>
                         <div t-if="o.hermandades_ids" id="clases_reservadas" class="row" style="margin-top: 10px;">
                             <table class="table">
@@ -79,7 +74,7 @@
                             </table>
                         </div>
                         <div t-if="o.enseres_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
-                            Enseres pertenecientes del almacen de<span t-field="o.sLocalizacion" />
+                            Enseres pertenecientes del almacen de <span t-field="o.sLocalizacion" />
                         </div>
                         <div t-if="o.enseres_ids" id="clases_reservadas" class="row" style="margin-top: 10px;">
                             <table class="table">

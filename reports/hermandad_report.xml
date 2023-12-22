@@ -58,7 +58,7 @@
                             </div>
                         </div>
                         <div t-if="o.hermanos_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
-                            Hermanos pertenecientes de<span t-field="o.sNombre" />
+                            Hermanos pertenecientes de <span t-field="o.sNombre" />
                         </div>
                         <div t-if="o.hermanos_ids" id="clases_reservadas" class="row" style="margin-top: 10px;">
                             <table class="table">
@@ -99,7 +99,7 @@
                             </table>
                         </div>
                         <div t-if="o.almacenes_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 19px;">
-                            Almacenes pertenecientes de<span t-field="o.sNombre" />
+                            Almacenes pertenecientes de <span t-field="o.sNombre" />
                         </div>
                         <div t-if="o.almacenes_ids" id="clases_reservadas" class="row" style="margin-top: 10px;">
                             <table class="table">

@@ -1,0 +1,7 @@
+id,id_enser,sNombre,iCantidad,sDescripcion,almacen_id/id
+enser0,,"Velas",50,"Velas para el paso","almacen0"
+enser1,,"Palio",2,"Palio del paso","almacen0"
+enser2,,"Burrita",1,"Escultura de la burrita","almacen1"
+enser3,,"Mantilla",20,"Mantillas para las mujeres","almacen1"
+enser4,,"Estampita",1000,"Estampitas variadas","almacen2"
+enser5,,"Rosario",30,"Rosarios para la venta","almacen2"

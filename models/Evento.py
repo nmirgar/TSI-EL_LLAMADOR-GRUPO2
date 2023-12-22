@@ -25,7 +25,7 @@ class Evento(models.Model):
             if x.sFechaHora < fields.Datetime.now() + timedelta(days=7):
                 x.sEstado = 'Proximo'
             else:
-                x.evento.sEstado = 'Futuro'
+                x.sEstado = 'Futuro'
     
     @api.constrains('sFechaHora')
     def _check_fechahora(self):

@@ -51,4 +51,4 @@ class Hermano(models.Model):
 
     #Report
     def btn_generate_report(self):
-          return self.env.ref('llamador.report_hermano').report_action(self)
+          return self.env.ref('el__llamador.report_hermano').report_action(self)

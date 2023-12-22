@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     
-    <report id="report_papeletas" string="Papeleta Report" model="llamador.papeleta" report_type="qweb-pdf" name="llamador.report_papeleta" />
+    <report id="report_papeletas" string="Papeleta Report" model="llamador.papeleta" report_type="qweb-pdf" name="el__llamador.report_papeleta" />
 
-    <report id="report_hermano" string="Report" model="llamador.hermano" report_type="qweb-pdf" name="llamador.llamador_hermano_template" />
+    <report id="report_hermano" string="Report Hermano" model="llamador.hermano" report_type="qweb-pdf" name="el__llamador.llamador_hermano_template" />
     
-    <report id="report_hermandad" string="Report" model="llamador.hermandad" report_type="qweb-pdf" name="llamador.llamador_hermandad_template"/>
+    <report id="report_hermandad" string="Report Hermandad" model="llamador.hermandad" report_type="qweb-pdf" name="el__llamador.llamador_hermandad_template"/>
     
-    <report id="report_almacen" string="Report" model="llamador.almacen" report_type="qweb-pdf" name="llamador.llamador_almacen_template"/> 
+    <report id="report_almacen" string="Report Almacen" model="llamador.almacen" report_type="qweb-pdf" name="el__llamador.llamador_almacen_template"/> 
 
-    <report id="report_evento" string="Evento Report" model="llamador.evento" report_type="qweb-pdf" name="llamador.llamador_evento_template" />
+    <report id="report_evento" string="Report Evento" model="llamador.evento" report_type="qweb-pdf" name="el__llamador.llamador_evento_template" />
 </odoo>
 

@@ -36,7 +36,7 @@ class Hermandad(models.Model):
 
 
     #Funciones
-    iNumHermanos = fields.Integer(compute='_numeroHermanos', string='Numero de Hermanos pertenecienets', store = True)
+    iNumHermanos = fields.Integer(compute='_numeroHermanos', string='Numero de Hermanos pertenecientes', store = True)
     iNumAlmacenes = fields.Integer(compute='_numeroAlmacenes',string='Numero de Almacenes pertenecientes',store=True)
     
     @api.depends('hermanos_ids')
@@ -82,4 +82,4 @@ class Hermandad(models.Model):
         self.write({'hermanos_ids': [(5,)]})
 
     def btn_generate_report(self):
-          return self.env.ref('llamador.report_hermandad').report_action(self)
+          return self.env.ref('el__llamador.report_hermandad').report_action(self)
